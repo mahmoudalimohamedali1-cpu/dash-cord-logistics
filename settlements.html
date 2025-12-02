@@ -229,7 +229,45 @@
     /* Analytics Section */
     .analytics-section {
       padding: 100px 0;
-      background: white;
+      background: linear-gradient(165deg, #0f172a 0%, #1e293b 40%, #334155 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .analytics-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    
+    .analytics-section .section-header h2,
+    .analytics-section .section-header p {
+      color: white;
+    }
+    
+    .analytics-section .chart-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .analytics-section .chart-title {
+      color: white;
+    }
+    
+    .analytics-section .summary-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .analytics-section .summary-value,
+    .analytics-section .summary-label {
+      color: white;
     }
     
     .analytics-grid {
@@ -571,30 +609,72 @@
       <div class="analytics-grid">
         <div class="chart-container">
           <div class="chart-title">الإيرادات الشهرية (آخر 6 أشهر)</div>
-          <div class="bar-chart">
-            <div class="bar-group">
-              <div class="bar" style="height: 65%"></div>
-              <div class="bar-label">يناير</div>
+          <div style="position: relative; height: 280px; padding: 20px 20px 40px 50px;">
+            <!-- Y-axis labels -->
+            <div style="position: absolute; left: 0; top: 20px; bottom: 40px; display: flex; flex-direction: column; justify-content: space-between; font-size: 0.75rem; color: rgba(255, 255, 255, 0.7);">
+              <div>200K</div>
+              <div>150K</div>
+              <div>100K</div>
+              <div>50K</div>
+              <div>0</div>
             </div>
-            <div class="bar-group">
-              <div class="bar" style="height: 75%"></div>
-              <div class="bar-label">فبراير</div>
+            
+            <!-- Grid lines -->
+            <div style="position: absolute; left: 50px; right: 20px; top: 20px; bottom: 40px;">
+              <div style="position: absolute; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); top: 0%;"></div>
+              <div style="position: absolute; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); top: 25%;"></div>
+              <div style="position: absolute; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); top: 50%;"></div>
+              <div style="position: absolute; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); top: 75%;"></div>
+              <div style="position: absolute; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); top: 100%;"></div>
             </div>
-            <div class="bar-group">
-              <div class="bar" style="height: 60%"></div>
-              <div class="bar-label">مارس</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar" style="height: 85%"></div>
-              <div class="bar-label">أبريل</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar" style="height: 80%"></div>
-              <div class="bar-label">مايو</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar" style="height: 95%"></div>
-              <div class="bar-label">يونيو</div>
+            
+            <!-- Chart SVG -->
+            <svg viewBox="0 0 500 200" style="position: absolute; left: 50px; right: 20px; top: 20px; bottom: 40px; width: calc(100% - 70px); height: calc(100% - 60px);">
+              <!-- Area fill -->
+              <defs>
+                <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.05" />
+                </linearGradient>
+              </defs>
+              
+              <!-- Area -->
+              <path d="M 0 140 L 100 110 L 200 75 L 300 90 L 400 50 L 500 25 L 500 200 L 0 200 Z" 
+                    fill="url(#areaGradient)" />
+              
+              <!-- Line -->
+              <path d="M 0 140 L 100 110 L 200 75 L 300 90 L 400 50 L 500 25" 
+                    fill="none" 
+                    stroke="#06b6d4" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" />
+              
+              <!-- Data points -->
+              <circle cx="0" cy="140" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              <circle cx="100" cy="110" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              <circle cx="200" cy="75" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              <circle cx="300" cy="90" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              <circle cx="400" cy="50" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              <circle cx="500" cy="25" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+              
+              <!-- Values above points -->
+              <text x="0" y="130" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">142K</text>
+              <text x="100" y="100" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">158K</text>
+              <text x="200" y="65" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">173K</text>
+              <text x="300" y="80" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">166K</text>
+              <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">184K</text>
+              <text x="500" y="15" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">193K</text>
+            </svg>
+            
+            <!-- X-axis labels -->
+            <div style="position: absolute; left: 50px; right: 20px; bottom: 10px; display: flex; justify-content: space-between; font-size: 0.8rem; color: rgba(255, 255, 255, 0.8); font-weight: 500;">
+              <div>يوليو</div>
+              <div>أغسطس</div>
+              <div>سبتمبر</div>
+              <div>أكتوبر</div>
+              <div>نوفمبر</div>
+              <div>ديسمبر</div>
             </div>
           </div>
         </div>
@@ -617,7 +697,7 @@
               <i class="fas fa-users"></i>
           </div>
             <div class="summary-value">186</div>
-            <div class="summary-label">مندوب نشط</div>
+            <div class="summary-label">منديب نشط</div>
             <div class="summary-detail">
               <i class="fas fa-check-circle"></i>
               <span>تسويات منتظمة</span>
@@ -668,7 +748,7 @@
             <i class="fas fa-file-invoice"></i>
           </div>
           <h3>كشوف حسابات تفصيلية</h3>
-          <p>تقارير مالية شاملة لكل مندوب مع تفاصيل كل معاملة مالية</p>
+          <p>تقارير مالية شاملة لكل منديب مع تفاصيل كل معاملة مالية</p>
           <ul class="feature-list">
             <li><i class="fas fa-check"></i> كشوف يومية وأسبوعية</li>
             <li><i class="fas fa-check"></i> سجل المعاملات</li>
@@ -801,7 +881,7 @@
       </div>
       
       <div class="footer-bottom">
-        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <p>© 2025 داش كورد. جميع الحقوق محفوظة.</p>
         <div class="footer-social">
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
