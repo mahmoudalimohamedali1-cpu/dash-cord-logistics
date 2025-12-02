@@ -16,6 +16,422 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === SETTLEMENTS PAGE CUSTOM STYLES === */
+    
+    .settlements-hero {
+      min-height: 90vh;
+      background: linear-gradient(165deg, #7c3aed 0%, #6d28d9 40%, #5b21b6 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+    
+    .settlements-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+    }
+    
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    .settlements-hero-content {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .hero-text h1 {
+      color: var(--white);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+    
+    .hero-text h1 span {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-text p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    
+    .hero-stat-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .hero-stat-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .hero-stat-label {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.85rem;
+    }
+    
+    /* Financial Dashboard */
+    .financial-dashboard {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-2xl);
+      padding: 32px;
+      backdrop-filter: blur(20px);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    
+    .dashboard-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    
+    .dashboard-title i {
+      color: #fbbf24;
+    }
+    
+    .sync-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(245, 158, 11, 0.2);
+      border-radius: 100px;
+      color: #fbbf24;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .sync-badge i {
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .financial-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    
+    .financial-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    
+    .financial-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    
+    .financial-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    
+    .financial-card-icon.green { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+    .financial-card-icon.red { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+    .financial-card-icon.blue { background: rgba(37, 99, 235, 0.2); color: #3b82f6; }
+    .financial-card-icon.yellow { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    
+    .financial-card-value {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+    }
+    
+    .financial-card-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    
+    .financial-card-trend {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .financial-card-trend.positive {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+    }
+    
+    .financial-card-trend.negative {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+    
+    /* Analytics Section */
+    .analytics-section {
+      padding: 100px 0;
+      background: white;
+    }
+    
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .chart-container {
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      border-radius: var(--radius-2xl);
+      padding: 40px;
+    }
+    
+    .chart-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 32px;
+    }
+    
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 300px;
+      gap: 16px;
+    }
+    
+    .bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .bar {
+      width: 100%;
+      background: linear-gradient(180deg, #7c3aed, #6d28d9);
+      border-radius: 8px 8px 0 0;
+      transition: all 0.3s ease;
+      animation: growBar 1s ease-out forwards;
+      transform-origin: bottom;
+    }
+    
+    .bar:hover {
+      background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+    }
+    
+    @keyframes growBar {
+      from { transform: scaleY(0); }
+      to { transform: scaleY(1); }
+    }
+    
+    .bar-label {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    
+    .summary-cards {
+      display: grid;
+      gap: 24px;
+    }
+    
+    .summary-card {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    
+    .summary-card:hover {
+      border-color: #7c3aed;
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.12);
+      transform: translateY(-4px);
+    }
+    
+    .summary-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    
+    .summary-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+    
+    .summary-label {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    
+    .summary-detail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-500);
+      font-size: 0.85rem;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--gray-50), white);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 50px;
+    }
+    
+    .feature-box {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-box:hover {
+      border-color: #7c3aed;
+      box-shadow: 0 12px 32px rgba(124, 58, 237, 0.15);
+      transform: translateY(-6px);
+    }
+    
+    .feature-icon-large {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+    
+    .feature-box h3 {
+      font-size: 1.4rem;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+    
+    .feature-box p {
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gray-700);
+      padding: 8px 0;
+      font-size: 0.95rem;
+    }
+    
+    .feature-list li i {
+      color: #7c3aed;
+    }
+    
+    @media (max-width: 768px) {
+      .settlements-hero-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      
+      .analytics-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .financial-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -47,105 +463,99 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hero Section -->
+  <section class="settlements-hero">
+    <div class="hero-grid-pattern"></div>
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <i class="fas fa-chevron-left"></i>
-        <span>التسويات المالية</span>
-      </div>
-      <h1>التسويات المالية</h1>
-      <p>لوحة تحكم مالية متكاملة لإدارة جميع المعاملات المالية بدقة واحترافية</p>
-    </div>
-  </section>
-
-  <!-- Dashboard Metrics -->
-  <section class="content-section dashboard-section">
-    <div class="container">
-      <div class="dashboard-grid">
-        <!-- Total Cash -->
-        <div class="dashboard-card col-4 fade-in">
-          <div class="metric-card" style="border-right: 4px solid var(--success-500);">
-            <div class="d-flex justify-between align-center mb-2">
-              <span style="color: var(--gray-500); font-size: 0.9rem;">إجمالي الكاش</span>
-              <i class="fas fa-money-bill-wave" style="color: var(--success-500); font-size: 1.5rem;"></i>
+      <div class="settlements-hero-content">
+        <div class="hero-text">
+          <h1>إدارة <span>مالية</span> دقيقة وشفافة</h1>
+          <p>نظام تسويات مالية متكامل مع حسابات تلقائية للمستحقات والخصومات والمكافآت، وتقارير مالية تفصيلية في الوقت الفعلي</p>
+          
+          <div class="hero-stats">
+            <div class="hero-stat-card">
+              <div class="hero-stat-value">342,580 ر.س</div>
+              <div class="hero-stat-label">إجمالي المعاملات</div>
             </div>
-            <div class="metric-value" style="color: var(--success-500);">125,450</div>
-            <div class="metric-label">ريال سعودي</div>
-            <div class="metric-change positive">
-              <i class="fas fa-arrow-up"></i>
-              <span>+12.5% من الشهر السابق</span>
+            <div class="hero-stat-card">
+              <div class="hero-stat-value">1,247</div>
+              <div class="hero-stat-label">تسوية مكتملة</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-value">99.8%</div>
+              <div class="hero-stat-label">دقة الحسابات</div>
             </div>
           </div>
         </div>
         
-        <!-- Total Deductions -->
-        <div class="dashboard-card col-4 fade-in delay-1">
-          <div class="metric-card" style="border-right: 4px solid var(--error-500);">
-            <div class="d-flex justify-between align-center mb-2">
-              <span style="color: var(--gray-500); font-size: 0.9rem;">إجمالي الخصومات</span>
-              <i class="fas fa-minus-circle" style="color: var(--error-500); font-size: 1.5rem;"></i>
+        <!-- Financial Dashboard -->
+        <div class="financial-dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-title">
+              <i class="fas fa-chart-pie"></i>
+              <span>لوحة المعلومات المالية</span>
             </div>
-            <div class="metric-value" style="color: var(--error-500);">8,320</div>
-            <div class="metric-label">ريال سعودي</div>
-            <div class="metric-change negative">
-              <i class="fas fa-arrow-down"></i>
-              <span>-5.2% من الشهر السابق</span>
+            <div class="sync-badge">
+              <i class="fas fa-sync-alt"></i>
+              <span>متزامن</span>
             </div>
           </div>
-        </div>
-        
-        <!-- Total Bonuses -->
-        <div class="dashboard-card col-4 fade-in delay-2">
-          <div class="metric-card" style="border-right: 4px solid var(--warning-500);">
-            <div class="d-flex justify-between align-center mb-2">
-              <span style="color: var(--gray-500); font-size: 0.9rem;">إجمالي المكافآت</span>
-              <i class="fas fa-gift" style="color: var(--warning-500); font-size: 1.5rem;"></i>
+          
+          <div class="financial-cards">
+            <div class="financial-card">
+              <div class="financial-card-header">
+                <div class="financial-card-icon green">
+                  <i class="fas fa-coins"></i>
+                </div>
+              </div>
+              <div class="financial-card-value">125,450</div>
+              <div class="financial-card-label">إجمالي الكاش (ر.س)</div>
+              <span class="financial-card-trend positive">
+                <i class="fas fa-arrow-up"></i>
+                +12.5%
+              </span>
             </div>
-            <div class="metric-value" style="color: var(--warning-500);">15,780</div>
-            <div class="metric-label">ريال سعودي</div>
-            <div class="metric-change positive">
-              <i class="fas fa-arrow-up"></i>
-              <span>+8.3% من الشهر السابق</span>
+            
+            <div class="financial-card">
+              <div class="financial-card-header">
+                <div class="financial-card-icon red">
+                  <i class="fas fa-minus-circle"></i>
+                </div>
+              </div>
+              <div class="financial-card-value">8,320</div>
+              <div class="financial-card-label">الخصومات (ر.س)</div>
+              <span class="financial-card-trend negative">
+                <i class="fas fa-arrow-down"></i>
+                -5.2%
+              </span>
             </div>
-          </div>
-        </div>
-        
-        <!-- Revenue Chart -->
-        <div class="dashboard-card col-8 fade-in delay-3">
-          <div class="dashboard-card-header">
-            <div class="dashboard-card-title">
-              <i class="fas fa-chart-area" style="color: var(--primary-500); margin-left: 10px;"></i>
-              تحليل الإيرادات الشهرية
+            
+            <div class="financial-card">
+              <div class="financial-card-header">
+                <div class="financial-card-icon blue">
+                  <i class="fas fa-gift"></i>
+                </div>
+              </div>
+              <div class="financial-card-value">15,680</div>
+              <div class="financial-card-label">المكافآت (ر.س)</div>
+              <span class="financial-card-trend positive">
+                <i class="fas fa-arrow-up"></i>
+                +18.3%
+              </span>
             </div>
-            <div class="dashboard-card-badge">آخر 6 أشهر</div>
-          </div>
-          <div class="chart-placeholder">
-            <div class="chart-bars">
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-            </div>
-            <p style="color: var(--gray-400); font-size: 0.9rem;">رسم بياني للإيرادات</p>
-          </div>
-        </div>
-        
-        <!-- Commissions -->
-        <div class="dashboard-card col-4 fade-in delay-4">
-          <div class="metric-card" style="border-right: 4px solid var(--primary-500);">
-            <div class="d-flex justify-between align-center mb-2">
-              <span style="color: var(--gray-500); font-size: 0.9rem;">إجمالي العمولات</span>
-              <i class="fas fa-percent" style="color: var(--primary-500); font-size: 1.5rem;"></i>
-            </div>
-            <div class="metric-value" style="color: var(--primary-500);">42,650</div>
-            <div class="metric-label">ريال سعودي</div>
-            <div class="metric-change positive">
-              <i class="fas fa-arrow-up"></i>
-              <span>+15.7% من الشهر السابق</span>
+            
+            <div class="financial-card">
+              <div class="financial-card-header">
+                <div class="financial-card-icon yellow">
+                  <i class="fas fa-wallet"></i>
+                </div>
+              </div>
+              <div class="financial-card-value">132,810</div>
+              <div class="financial-card-label">الصافي (ر.س)</div>
+              <span class="financial-card-trend positive">
+                <i class="fas fa-arrow-up"></i>
+                +14.8%
+              </span>
             </div>
           </div>
         </div>
@@ -153,235 +563,198 @@
     </div>
   </section>
 
-  <!-- Financial Features -->
-  <section class="content-section" style="background: var(--white);">
+  <!-- Analytics Section -->
+  <section class="analytics-section">
     <div class="container">
-      <div class="section-header">
-        <h2>مميزات النظام المالي</h2>
-        <p>أدوات متقدمة لإدارة جميع الجوانب المالية بكفاءة عالية</p>
+      <div class="section-header text-center">
+        <h2>تحليلات مالية متقدمة</h2>
+        <p>بيانات دقيقة ورسوم بيانية توضيحية لفهم أفضل للوضع المالي</p>
       </div>
       
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));">
-            <i class="fas fa-money-bill-transfer" style="color: var(--success-500);"></i>
+      <div class="analytics-grid">
+        <div class="chart-container">
+          <div class="chart-title">الإيرادات الشهرية (آخر 6 أشهر)</div>
+          <div class="bar-chart">
+            <div class="bar-group">
+              <div class="bar" style="height: 65%"></div>
+              <div class="bar-label">يناير</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 75%"></div>
+              <div class="bar-label">فبراير</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 60%"></div>
+              <div class="bar-label">مارس</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 85%"></div>
+              <div class="bar-label">أبريل</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar-label">مايو</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 95%"></div>
+              <div class="bar-label">يونيو</div>
+            </div>
           </div>
-          <h3>إدارة كاش – خصومات – مكافآت – عمولات</h3>
-          <p>نظام شامل لإدارة جميع أنواع المعاملات المالية مع تتبع دقيق لكل عملية.</p>
         </div>
         
-        <div class="feature-card fade-in delay-1">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));">
-            <i class="fas fa-chart-pie" style="color: var(--primary-500);"></i>
+        <div class="summary-cards">
+          <div class="summary-card">
+            <div class="summary-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+              <i class="fas fa-arrow-trend-up"></i>
+            </div>
+            <div class="summary-value">+24.5%</div>
+            <div class="summary-label">نمو الإيرادات</div>
+            <div class="summary-detail">
+              <i class="fas fa-calendar"></i>
+              <span>مقارنة بالشهر الماضي</span>
+            </div>
           </div>
-          <h3>تحليل المدفوعات</h3>
-          <p>تحليل تفصيلي للعمولات والخصومات والبونص والإكراميات مع رسوم بيانية توضيحية.</p>
-        </div>
-        
-        <div class="feature-card fade-in delay-2">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));">
-            <i class="fas fa-file-invoice-dollar" style="color: #8b5cf6;"></i>
+          
+          <div class="summary-card">
+            <div class="summary-icon" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="summary-value">186</div>
+            <div class="summary-label">مندوب نشط</div>
+            <div class="summary-detail">
+              <i class="fas fa-check-circle"></i>
+              <span>تسويات منتظمة</span>
+            </div>
           </div>
-          <h3>كشف حساب لكل مندوب</h3>
-          <p>كشوف حسابات مفصلة لكل مندوب تشمل جميع المعاملات المالية.</p>
-        </div>
-        
-        <div class="feature-card fade-in delay-3">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));">
-            <i class="fas fa-bell" style="color: var(--error-500);"></i>
+          
+          <div class="summary-card">
+            <div class="summary-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="summary-value">< 24h</div>
+            <div class="summary-label">وقت المعالجة</div>
+            <div class="summary-detail">
+              <i class="fas fa-bolt"></i>
+              <span>معالجة سريعة</span>
+            </div>
           </div>
-          <h3>تنبيهات تأخر الدفع</h3>
-          <p>إشعارات فورية عند تأخر التسويات مع تقارير المتأخرات.</p>
-        </div>
-        
-        <div class="feature-card fade-in delay-4">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.1));">
-            <i class="fas fa-code-compare" style="color: var(--accent-500);"></i>
-          </div>
-          <h3>مقارنة فترات مالية</h3>
-          <p>مقارنة الأداء المالي بين فترات مختلفة لتحليل النمو والاتجاهات.</p>
-        </div>
-        
-        <div class="feature-card fade-in delay-5">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));">
-            <i class="fas fa-chart-line" style="color: var(--warning-500);"></i>
-          </div>
-          <h3>إحصائيات رسومية Charts</h3>
-          <p>رسوم بيانية تفاعلية لعرض البيانات المالية بشكل واضح ومفهوم.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sample Table Section -->
-  <section class="content-section" style="background: var(--gray-50);">
+  <!-- Features Section -->
+  <section class="features-section">
     <div class="container">
-      <div class="section-header">
-        <h2>كشف حساب المناديب</h2>
-        <p>عرض تفصيلي للمعاملات المالية لكل مندوب</p>
+      <div class="section-header text-center">
+        <h2>مميزات نظام التسويات</h2>
+        <p>أدوات شاملة لإدارة مالية احترافية ودقيقة</p>
       </div>
       
-      <div class="dashboard-card col-12 fade-in" style="overflow-x: auto;">
-        <div class="dashboard-card-header">
-          <div class="dashboard-card-title">
-            <i class="fas fa-table" style="color: var(--primary-500); margin-left: 10px;"></i>
-            آخر التسويات
+      <div class="feature-grid">
+        <div class="feature-box fade-in">
+          <div class="feature-icon-large">
+            <i class="fas fa-calculator"></i>
           </div>
-          <div class="d-flex gap-2">
-            <button class="btn" style="padding: 8px 16px; background: var(--gray-100); color: var(--gray-600); font-size: 0.9rem;">
-              <i class="fas fa-filter"></i> فلترة
-            </button>
-            <button class="btn" style="padding: 8px 16px; background: var(--primary-100); color: var(--primary-600); font-size: 0.9rem;">
-              <i class="fas fa-download"></i> تصدير
-            </button>
-          </div>
+          <h3>حسابات تلقائية</h3>
+          <p>حساب دقيق ومباشر لجميع المستحقات والخصومات والمكافآت دون تدخل يدوي</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> حساب العمولات</li>
+            <li><i class="fas fa-check"></i> خصم المخالفات</li>
+            <li><i class="fas fa-check"></i> إضافة المكافآت</li>
+            <li><i class="fas fa-check"></i> رصيد الكاش اليومي</li>
+          </ul>
         </div>
         
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>المندوب</th>
-              <th>الفترة</th>
-              <th>الكاش</th>
-              <th>العمولات</th>
-              <th>الخصومات</th>
-              <th>المكافآت</th>
-              <th>الصافي</th>
-              <th>الحالة</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="d-flex align-center gap-2">
-                  <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <span>أحمد محمد</span>
-                </div>
-              </td>
-              <td>نوفمبر 2024</td>
-              <td>8,500 ر.س</td>
-              <td>2,125 ر.س</td>
-              <td>350 ر.س</td>
-              <td>500 ر.س</td>
-              <td><strong style="color: var(--success-500);">10,775 ر.س</strong></td>
-              <td><span class="status-badge success"><i class="fas fa-check"></i> مكتمل</span></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-center gap-2">
-                  <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <span>خالد العلي</span>
-                </div>
-              </td>
-              <td>نوفمبر 2024</td>
-              <td>7,200 ر.س</td>
-              <td>1,800 ر.س</td>
-              <td>200 ر.س</td>
-              <td>750 ر.س</td>
-              <td><strong style="color: var(--success-500);">9,550 ر.س</strong></td>
-              <td><span class="status-badge success"><i class="fas fa-check"></i> مكتمل</span></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-center gap-2">
-                  <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <span>فهد السعيد</span>
-                </div>
-              </td>
-              <td>نوفمبر 2024</td>
-              <td>9,100 ر.س</td>
-              <td>2,275 ر.س</td>
-              <td>450 ر.س</td>
-              <td>300 ر.س</td>
-              <td><strong style="color: var(--warning-500);">11,225 ر.س</strong></td>
-              <td><span class="status-badge warning"><i class="fas fa-clock"></i> قيد المراجعة</span></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-center gap-2">
-                  <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <span>عبدالله الحربي</span>
-                </div>
-              </td>
-              <td>نوفمبر 2024</td>
-              <td>6,800 ر.س</td>
-              <td>1,700 ر.س</td>
-              <td>150 ر.س</td>
-              <td>400 ر.س</td>
-              <td><strong style="color: var(--error-500);">8,750 ر.س</strong></td>
-              <td><span class="status-badge error"><i class="fas fa-exclamation"></i> متأخر</span></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex align-center gap-2">
-                  <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <span>سعد الغامدي</span>
-                </div>
-              </td>
-              <td>نوفمبر 2024</td>
-              <td>7,900 ر.س</td>
-              <td>1,975 ر.س</td>
-              <td>300 ر.س</td>
-              <td>600 ر.س</td>
-              <td><strong style="color: var(--success-500);">10,175 ر.س</strong></td>
-              <td><span class="status-badge success"><i class="fas fa-check"></i> مكتمل</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- More Financial Stats -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item fade-in">
-          <div class="stat-number">192M</div>
-          <div class="stat-label">إجمالي التسويات</div>
+        <div class="feature-box fade-in delay-1">
+          <div class="feature-icon-large">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3>كشوف حسابات تفصيلية</h3>
+          <p>تقارير مالية شاملة لكل مندوب مع تفاصيل كل معاملة مالية</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> كشوف يومية وأسبوعية</li>
+            <li><i class="fas fa-check"></i> سجل المعاملات</li>
+            <li><i class="fas fa-check"></i> تصدير PDF وExcel</li>
+            <li><i class="fas fa-check"></i> أرشفة إلكترونية</li>
+          </ul>
         </div>
-        <div class="stat-item fade-in delay-1">
-          <div class="stat-number">+2500</div>
-          <div class="stat-label">عملية شهرياً</div>
+        
+        <div class="feature-box fade-in delay-2">
+          <div class="feature-icon-large">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>أمان وموثوقية</h3>
+          <p>نظام آمن بتشفير عالي مع سجل كامل لجميع العمليات المالية</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> تشفير البيانات</li>
+            <li><i class="fas fa-check"></i> صلاحيات متعددة</li>
+            <li><i class="fas fa-check"></i> سجل التدقيق</li>
+            <li><i class="fas fa-check"></i> نسخ احتياطي تلقائي</li>
+          </ul>
         </div>
-        <div class="stat-item fade-in delay-2">
-          <div class="stat-number">99.8%</div>
-          <div class="stat-label">دقة التسويات</div>
+        
+        <div class="feature-box fade-in delay-3">
+          <div class="feature-icon-large">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>تنبيهات ذكية</h3>
+          <p>إشعارات فورية عن التسويات والحدود المالية والمعاملات المهمة</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> تجاوز حد الكاش</li>
+            <li><i class="fas fa-check"></i> موعد التسوية</li>
+            <li><i class="fas fa-check"></i> معاملات كبيرة</li>
+            <li><i class="fas fa-check"></i> تحديثات الحساب</li>
+          </ul>
         </div>
-        <div class="stat-item fade-in delay-3">
-          <div class="stat-number">24h</div>
-          <div class="stat-label">متوسط وقت التسوية</div>
+        
+        <div class="feature-box fade-in delay-4">
+          <div class="feature-icon-large">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>تحليلات متقدمة</h3>
+          <p>رؤى مالية عميقة مع رسوم بيانية وتقارير تفصيلية</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> تحليل الإيرادات</li>
+            <li><i class="fas fa-check"></i> مقارنات زمنية</li>
+            <li><i class="fas fa-check"></i> توقعات مالية</li>
+            <li><i class="fas fa-check"></i> مؤشرات الأداء</li>
+          </ul>
+        </div>
+        
+        <div class="feature-box fade-in delay-5">
+          <div class="feature-icon-large">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>متابعة لحظية</h3>
+          <p>الوصول الفوري للحسابات المالية من أي مكان وعلى أي جهاز</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> تطبيق موبايل</li>
+            <li><i class="fas fa-check"></i> تحديثات فورية</li>
+            <li><i class="fas fa-check"></i> إشعارات push</li>
+            <li><i class="fas fa-check"></i> عمل offline</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background: var(--white);">
+  <section class="section" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">
     <div class="container">
       <div class="text-center">
-        <h2 style="margin-bottom: 20px;">أدر تسوياتك المالية باحترافية</h2>
-        <p style="color: var(--gray-500); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
-          نظام مالي متكامل يوفر لك رؤية شاملة لجميع معاملاتك المالية
+        <h2 style="color: white; margin-bottom: 20px;">جاهز لتبسيط العمليات المالية؟</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          ابدأ الآن واستمتع بإدارة مالية دقيقة وشفافة مع تسويات تلقائية
         </p>
         <div class="d-flex gap-3 justify-center flex-wrap">
-          <a href="support.html#contact" class="btn btn-primary btn-lg">
+          <a href="support.html#contact" class="btn btn-secondary btn-lg">
             <i class="fas fa-rocket"></i>
             <span>ابدأ مجاناً</span>
           </a>
-          <a href="reports.html" class="btn btn-secondary btn-lg">
-            <i class="fas fa-chart-pie"></i>
-            <span>التقارير</span>
+          <a href="support.html" class="btn btn-outline btn-lg" style="color: white; border-color: white;">
+            <i class="fas fa-phone"></i>
+            <span>تواصل معنا</span>
           </a>
         </div>
       </div>
@@ -454,4 +827,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
