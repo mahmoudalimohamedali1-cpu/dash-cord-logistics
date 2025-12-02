@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نظام احترافي لإدارة المندوبين بالكامل">
+  <title>إدارة المندوبين | داش كورد</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <span>داش كورد</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="index.html"><span>الرئيسية</span></a>
+        <a href="vehicles.html"><span>المركبات</span></a>
+        <a href="riders.html" class="active"><span>المندوبين</span></a>
+        <a href="settlements.html"><span>التسويات</span></a>
+        <a href="reports.html"><span>التقارير</span></a>
+        <a href="alerts.html"><span>التنبيهات</span></a>
+        <a href="support.html"><span>الدعم</span></a>
+        <a href="support.html#contact" class="navbar-cta">تواصل معنا</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>إدارة المندوبين</span>
+      </div>
+      <h1>نظام احترافي لإدارة المندوبين بالكامل</h1>
+      <p>إدارة شاملة لفريق التوصيل مع متابعة الأداء والشيفتات والتسويات المالية</p>
+    </div>
+  </section>
+
+  <!-- Rider Profile Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>📌 ملف شامل لكل مندوب</h2>
+        <p>جميع المعلومات والبيانات التي تحتاجها عن كل مندوب في مكان واحد</p>
+      </div>
+      
+      <div class="content-grid">
+        <!-- Documents -->
+        <div class="content-card fade-in">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h4>المستندات</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>صورة الهوية الوطنية</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>رخصة القيادة</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>مستندات إضافية</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>شهادة الفحص الطبي</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Joining Info -->
+        <div class="content-card fade-in delay-1">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-calendar-plus"></i>
+            </div>
+            <h4>تاريخ الانضمام</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>تاريخ بداية العمل</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>نوع العقد</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>الفترة التجريبية</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>تاريخ التثبيت</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Notes & Performance -->
+        <div class="content-card fade-in delay-2">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h4>ملاحظات وسجل الأداء</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>ملاحظات المشرفين</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>تقييمات العملاء</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>الإنذارات والتنبيهات</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>المكافآت والترقيات</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Personal Photo -->
+        <div class="content-card fade-in delay-3">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-camera"></i>
+            </div>
+            <h4>صورة شخصية</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>صورة بطاقة التعريف</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>صورة حديثة واضحة</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>صورة بالزي الرسمي</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Rider Status -->
+        <div class="content-card fade-in delay-4">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-signal"></i>
+            </div>
+            <h4>حالة المندوب</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-circle" style="color: var(--success-500); font-size: 0.75rem;"></i>
+              <span>نشط - متاح للعمل</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-circle" style="color: var(--warning-500); font-size: 0.75rem;"></i>
+              <span>متوقف - في إجازة</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-circle" style="color: var(--error-500); font-size: 0.75rem;"></i>
+              <span>غياب - غير متاح</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-circle" style="color: var(--gray-400); font-size: 0.75rem;"></i>
+              <span>منتهي - تم إنهاء العقد</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Shifts & Productivity -->
+        <div class="content-card fade-in delay-5">
+          <div class="content-card-header">
+            <div class="content-card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4>الشيفتات والإنتاجية</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>الشيفت الحالي</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>جدول الشيفتات الأسبوعي</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>الإنتاجية اليومية</span>
+            </div>
+            <div class="content-list-item">
+              <i class="fas fa-check-circle"></i>
+              <span>معدل الأداء العام</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rider Management Services -->
+  <section class="content-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>📌 خدمات إدارة المندوبين</h2>
+        <p>مجموعة متكاملة من الخدمات لإدارة فريق المندوبين باحترافية</p>
+      </div>
+      
+      <div class="icon-list" style="max-width: 900px; margin: 0 auto;">
+        <!-- Add Riders -->
+        <div class="content-card fade-in" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, var(--success-500), var(--success-400)); color: white;">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>إضافة وتسجيل المندوبين الجدد وربطهم فورًا</h5>
+              <p>أضف مندوبين جدد بخطوات بسيطة مع إمكانية ربطهم بالمركبات والشيفتات مباشرة</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Monitor Status -->
+        <div class="content-card fade-in delay-1" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, var(--primary-500), var(--primary-400)); color: white;">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>متابعة حالة المندوب: (نشط – متوقف – غياب)</h5>
+              <p>تتبع حالة كل مندوب لحظياً مع إشعارات فورية عند تغير الحالة</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Performance Monitoring -->
+        <div class="content-card fade-in delay-2" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, var(--accent-500), #0891b2); color: white;">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>مراقبة الأداء اليومي والأسبوعي</h5>
+              <p>تتبع مؤشرات الأداء الرئيسية:</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+                <span class="status-badge info"><i class="fas fa-box"></i> عدد الطلبات</span>
+                <span class="status-badge success"><i class="fas fa-check"></i> نسبة النجاح</span>
+                <span class="status-badge warning"><i class="fas fa-clock"></i> الوقت</span>
+                <span class="status-badge error"><i class="fas fa-times"></i> الإلغاء</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Financial Settlements -->
+        <div class="content-card fade-in delay-3" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, var(--warning-500), #d97706); color: white;">
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>إدارة التسويات المالية</h5>
+              <p>نظام متكامل لإدارة:</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+                <span class="status-badge" style="background: #fef3c7; color: #92400e;"><i class="fas fa-money-bill"></i> كاش</span>
+                <span class="status-badge" style="background: #fee2e2; color: #991b1b;"><i class="fas fa-minus-circle"></i> خصومات</span>
+                <span class="status-badge" style="background: #d1fae5; color: #065f46;"><i class="fas fa-gift"></i> مكافآت</span>
+                <span class="status-badge" style="background: #dbeafe; color: #1e40af;"><i class="fas fa-percent"></i> عمولات</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Payment Analysis -->
+        <div class="content-card fade-in delay-4" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white;">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>تحليل المدفوعات</h5>
+              <p>تحليل دقيق للعمولات – الخصومات – البونص – الإكراميات مع تقارير مفصلة</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Performance Reports -->
+        <div class="content-card fade-in delay-5" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, #ec4899, #db2777); color: white;">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>تقارير مفصلة لمؤشرات الأداء</h5>
+              <p>تقارير شاملة قابلة للتخصيص والتصدير بصيغ متعددة</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Instant Alerts -->
+        <div class="content-card fade-in" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, var(--error-500), #dc2626); color: white;">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>تنبيهات فورية</h5>
+              <p>إشعارات آلية عند:</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+                <span class="status-badge warning"><i class="fas fa-arrow-down"></i> انخفاض الأداء</span>
+                <span class="status-badge error"><i class="fas fa-clock"></i> تأخر التسوية</span>
+                <span class="status-badge info"><i class="fas fa-exclamation"></i> ملاحظة على المندوب</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cash Management -->
+        <div class="content-card fade-in delay-1" style="margin-bottom: 20px;">
+          <div class="icon-list-item">
+            <div class="icon-list-icon" style="background: linear-gradient(135deg, #059669, #047857); color: white;">
+              <i class="fas fa-hand-holding-dollar"></i>
+            </div>
+            <div class="icon-list-content">
+              <h5>إدارة الكاش المستلم من المندوب</h5>
+              <p>تحديد حدود يومية للكاش مع تنبيهات فورية عند التجاوز</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shift Management Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>📌 نظام الشيفتات</h2>
+        <p>إدارة ذكية لجداول العمل والشيفتات الأسبوعية</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-week"></i>
+          </div>
+          <h3>إنشاء شيفتات أسبوعية</h3>
+          <p>أنشئ جداول شيفتات مرنة تتناسب مع احتياجات العمل مع إمكانية تكرارها تلقائياً.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>ربط المندوب بالشيفت تلقائيًا</h3>
+          <p>نظام ذكي لتوزيع المندوبين على الشيفتات حسب التفضيلات والتوافر.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3>مراقبة الالتزام</h3>
+          <p>تتبع مدى التزام المندوبين بمواعيد الشيفتات مع تقارير مفصلة.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3>تقارير حضور/غياب</h3>
+          <p>تقارير شاملة للحضور والغياب مع إحصائيات دقيقة لكل مندوب.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attendance Codes Section -->
+  <section class="content-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>📌 حضور وانصراف</h2>
+        <p>نظام أكواد موحد لتسجيل الحضور والانصراف</p>
+      </div>
+      
+      <div class="attendance-codes" style="max-width: 800px; margin: 0 auto;">
+        <div class="attendance-code fade-in">
+          <div class="attendance-code-letter present">P</div>
+          <div class="attendance-code-text">
+            <strong>Present</strong>
+            <br><span style="color: var(--gray-500);">حاضر</span>
+          </div>
+        </div>
+        
+        <div class="attendance-code fade-in delay-1">
+          <div class="attendance-code-letter absent">A</div>
+          <div class="attendance-code-text">
+            <strong>Absent</strong>
+            <br><span style="color: var(--gray-500);">غائب</span>
+          </div>
+        </div>
+        
+        <div class="attendance-code fade-in delay-2">
+          <div class="attendance-code-letter late">L</div>
+          <div class="attendance-code-text">
+            <strong>Late</strong>
+            <br><span style="color: var(--gray-500);">متأخر</span>
+          </div>
+        </div>
+        
+        <div class="attendance-code fade-in delay-3">
+          <div class="attendance-code-letter early">E</div>
+          <div class="attendance-code-text">
+            <strong>Early Leave</strong>
+            <br><span style="color: var(--gray-500);">انصراف مبكر</span>
+          </div>
+        </div>
+        
+        <div class="attendance-code fade-in delay-4">
+          <div class="attendance-code-letter off">O</div>
+          <div class="attendance-code-text">
+            <strong>Off</strong>
+            <br><span style="color: var(--gray-500);">إجازة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Productivity Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>📌 الإنتاجية اليومية</h2>
+        <p>تتبع وقياس إنتاجية كل مندوب بشكل يومي</p>
+      </div>
+      
+      <div class="content-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="content-card fade-in text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-100), var(--primary-50)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--primary-600);">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <h4>حساب الشحنات المنجزة يوميًا</h4>
+          <p style="color: var(--gray-500); margin-top: 12px;">تتبع دقيق لعدد الشحنات التي يقوم بها كل مندوب يومياً</p>
+        </div>
+        
+        <div class="content-card fade-in delay-1 text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--success-400), rgba(16, 185, 129, 0.2)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--success-500);">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>تتبع الإنتاجية</h4>
+          <p style="color: var(--gray-500); margin-top: 12px;">رسوم بيانية ومؤشرات لقياس تطور الإنتاجية</p>
+        </div>
+        
+        <div class="content-card fade-in delay-2 text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent-300), rgba(6, 182, 212, 0.2)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--accent-500);">
+            <i class="fas fa-file-export"></i>
+          </div>
+          <h4>رفع تقارير إنجاز تلقائية</h4>
+          <p style="color: var(--gray-500); margin-top: 12px;">إنشاء تقارير آلية يومية وأسبوعية للإنجازات</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">+1200</div>
+          <div class="stat-label">مندوب مسجل</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">+85K</div>
+          <div class="stat-label">طلب شهرياً</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">97%</div>
+          <div class="stat-label">نسبة النجاح</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">+150</div>
+          <div class="stat-label">شيفت أسبوعياً</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center">
+        <h2 style="margin-bottom: 20px;">أدر فريق المندوبين باحترافية</h2>
+        <p style="color: var(--gray-500); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          انضم الآن وابدأ في إدارة مندوبيك بكفاءة عالية مع نظام داش كورد
+        </p>
+        <div class="d-flex gap-3 justify-center flex-wrap">
+          <a href="support.html#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span>ابدأ مجاناً</span>
+          </a>
+          <a href="settlements.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-coins"></i>
+            <span>التسويات المالية</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <span>داش كورد</span>
+          </div>
+          <p>منصة متكاملة لإدارة أساطيل التوصيل والمندوبين باحترافية عالية، نساعدك على تحقيق أقصى كفاءة في عملياتك اللوجستية.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="vehicles.html">إدارة المركبات</a></li>
+            <li><a href="riders.html">إدارة المندوبين</a></li>
+            <li><a href="settlements.html">التسويات المالية</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>المزيد</h5>
+          <ul class="footer-links">
+            <li><a href="reports.html">التقارير</a></li>
+            <li><a href="alerts.html">التنبيهات</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li><a href="support.html#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>قانوني</h5>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسة الاستخدام</a></li>
+            <li><a href="support.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="صفحة التقارير - تقارير شاملة ومفصلة">
+  <title>التقارير | داش كورد</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <span>داش كورد</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="index.html"><span>الرئيسية</span></a>
+        <a href="vehicles.html"><span>المركبات</span></a>
+        <a href="riders.html"><span>المندوبين</span></a>
+        <a href="settlements.html"><span>التسويات</span></a>
+        <a href="reports.html" class="active"><span>التقارير</span></a>
+        <a href="alerts.html"><span>التنبيهات</span></a>
+        <a href="support.html"><span>الدعم</span></a>
+        <a href="support.html#contact" class="navbar-cta">تواصل معنا</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>التقارير</span>
+      </div>
+      <h1>مركز التقارير</h1>
+      <p>تقارير شاملة ومفصلة لجميع جوانب العمليات مع إمكانية التصدير والفلترة</p>
+    </div>
+  </section>
+
+  <!-- Report Types Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>أنواع التقارير المتاحة</h2>
+        <p>مجموعة متنوعة من التقارير لتغطية جميع احتياجاتك</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Daily Performance Reports -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));">
+            <i class="fas fa-calendar-day" style="color: var(--primary-500);"></i>
+          </div>
+          <h3>تقارير الأداء اليومية</h3>
+          <p>تقارير مفصلة عن أداء المندوبين والعمليات على أساس يومي مع مؤشرات الأداء الرئيسية.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Weekly Reports -->
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));">
+            <i class="fas fa-calendar-week" style="color: var(--success-500);"></i>
+          </div>
+          <h3>تقارير أسبوعية</h3>
+          <p>ملخص أسبوعي شامل للأداء مع مقارنات بالأسابيع السابقة وتحليل الاتجاهات.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Shift Reports -->
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));">
+            <i class="fas fa-clock" style="color: #8b5cf6;"></i>
+          </div>
+          <h3>تقارير الشيفتات</h3>
+          <p>تقارير تفصيلية عن الشيفتات والحضور والانصراف ونسب الالتزام.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Vehicle Reports -->
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.1));">
+            <i class="fas fa-car" style="color: var(--accent-500);"></i>
+          </div>
+          <h3>تقارير المركبات</h3>
+          <p>تقارير عن حالة المركبات والصيانة والتفاويض والفحوصات الدورية.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Settlement Reports -->
+        <div class="feature-card fade-in delay-4">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));">
+            <i class="fas fa-coins" style="color: var(--warning-500);"></i>
+          </div>
+          <h3>تقارير التسويات</h3>
+          <p>تقارير مالية شاملة عن التسويات والمدفوعات والمستحقات.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Notes Reports -->
+        <div class="feature-card fade-in delay-5">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.1));">
+            <i class="fas fa-sticky-note" style="color: #ec4899;"></i>
+          </div>
+          <h3>تقارير الملاحظات</h3>
+          <p>تجميع الملاحظات والتعليقات على المندوبين والمركبات والعمليات.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Productivity Reports -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));">
+            <i class="fas fa-chart-line" style="color: var(--error-500);"></i>
+          </div>
+          <h3>تقارير الإنتاجية</h3>
+          <p>تحليل مفصل لإنتاجية المندوبين ومعدلات الإنجاز والأداء.</p>
+          <a href="#" class="feature-link">
+            <span>عرض التقرير</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Export Options -->
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));">
+            <i class="fas fa-file-export" style="color: #22c55e;"></i>
+          </div>
+          <h3>تصدير PDF – Excel</h3>
+          <p>إمكانية تصدير جميع التقارير بصيغ PDF و Excel للمشاركة والأرشفة.</p>
+          <a href="#" class="feature-link">
+            <span>تصدير الآن</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Dashboard Section -->
+  <section class="content-section dashboard-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>لوحة التقارير التفاعلية</h2>
+        <p>رسوم بيانية وجداول تفاعلية لعرض البيانات</p>
+      </div>
+      
+      <div class="dashboard-grid">
+        <!-- Performance Overview Chart -->
+        <div class="dashboard-card col-8 fade-in">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">
+              <i class="fas fa-chart-area" style="color: var(--primary-500); margin-left: 10px;"></i>
+              نظرة عامة على الأداء
+            </div>
+            <div class="tabs" style="margin: 0; padding: 4px; background: var(--gray-100); border-radius: var(--radius-md);">
+              <button class="tab-btn active" style="padding: 8px 16px; font-size: 0.85rem;">يومي</button>
+              <button class="tab-btn" style="padding: 8px 16px; font-size: 0.85rem;">أسبوعي</button>
+              <button class="tab-btn" style="padding: 8px 16px; font-size: 0.85rem;">شهري</button>
+            </div>
+          </div>
+          <div class="chart-placeholder" style="height: 300px;">
+            <div class="chart-bars" style="height: 180px;">
+              <div class="chart-bar" style="height: 70%;"></div>
+              <div class="chart-bar" style="height: 85%;"></div>
+              <div class="chart-bar" style="height: 60%;"></div>
+              <div class="chart-bar" style="height: 95%;"></div>
+              <div class="chart-bar" style="height: 75%;"></div>
+              <div class="chart-bar" style="height: 88%;"></div>
+              <div class="chart-bar" style="height: 65%;"></div>
+            </div>
+            <p style="color: var(--gray-400); font-size: 0.9rem;">رسم بياني للأداء</p>
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="dashboard-card col-4 fade-in delay-1">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">
+              <i class="fas fa-tachometer-alt" style="color: var(--primary-500); margin-left: 10px;"></i>
+              إحصائيات سريعة
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
+              <span style="color: var(--gray-600);">الطلبات اليوم</span>
+              <span style="font-weight: 700; font-size: 1.25rem; color: var(--primary-600);">1,234</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
+              <span style="color: var(--gray-600);">نسبة النجاح</span>
+              <span style="font-weight: 700; font-size: 1.25rem; color: var(--success-500);">97.5%</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
+              <span style="color: var(--gray-600);">المندوبين النشطين</span>
+              <span style="font-weight: 700; font-size: 1.25rem; color: var(--accent-500);">156</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
+              <span style="color: var(--gray-600);">متوسط وقت التسليم</span>
+              <span style="font-weight: 700; font-size: 1.25rem; color: var(--warning-500);">28 د</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Performance Table -->
+        <div class="dashboard-card col-12 fade-in delay-2" style="overflow-x: auto;">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">
+              <i class="fas fa-table" style="color: var(--primary-500); margin-left: 10px;"></i>
+              تقرير أداء المندوبين
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn" style="padding: 8px 16px; background: var(--gray-100); color: var(--gray-600); font-size: 0.9rem;">
+                <i class="fas fa-filter"></i> فلترة
+              </button>
+              <button class="btn" style="padding: 8px 16px; background: var(--error-100); color: var(--error-600); font-size: 0.9rem;">
+                <i class="fas fa-file-pdf"></i> PDF
+              </button>
+              <button class="btn" style="padding: 8px 16px; background: var(--success-400); color: white; font-size: 0.9rem;">
+                <i class="fas fa-file-excel"></i> Excel
+              </button>
+            </div>
+          </div>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>المندوب</th>
+                <th>الطلبات</th>
+                <th>نسبة النجاح</th>
+                <th>متوسط الوقت</th>
+                <th>التقييم</th>
+                <th>الإنتاجية</th>
+                <th>الحالة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <span>أحمد محمد</span>
+                  </div>
+                </td>
+                <td>145</td>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div class="progress-bar" style="width: 80px; height: 8px;">
+                      <div class="progress-fill" style="width: 98%;"></div>
+                    </div>
+                    <span style="font-weight: 600; color: var(--success-500);">98%</span>
+                  </div>
+                </td>
+                <td>24 دقيقة</td>
+                <td>
+                  <div style="color: var(--warning-500);">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span style="margin-right: 5px;">4.7</span>
+                  </div>
+                </td>
+                <td><span class="status-badge success">ممتاز</span></td>
+                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <span>خالد العلي</span>
+                  </div>
+                </td>
+                <td>132</td>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div class="progress-bar" style="width: 80px; height: 8px;">
+                      <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                    <span style="font-weight: 600; color: var(--success-500);">95%</span>
+                  </div>
+                </td>
+                <td>27 دقيقة</td>
+                <td>
+                  <div style="color: var(--warning-500);">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span style="margin-right: 5px;">4.3</span>
+                  </div>
+                </td>
+                <td><span class="status-badge success">ممتاز</span></td>
+                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <span>فهد السعيد</span>
+                  </div>
+                </td>
+                <td>118</td>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div class="progress-bar" style="width: 80px; height: 8px;">
+                      <div class="progress-fill" style="width: 88%;"></div>
+                    </div>
+                    <span style="font-weight: 600; color: var(--warning-500);">88%</span>
+                  </div>
+                </td>
+                <td>32 دقيقة</td>
+                <td>
+                  <div style="color: var(--warning-500);">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span style="margin-right: 5px;">4.0</span>
+                  </div>
+                </td>
+                <td><span class="status-badge warning">جيد</span></td>
+                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <span>عبدالله الحربي</span>
+                  </div>
+                </td>
+                <td>95</td>
+                <td>
+                  <div class="d-flex align-center gap-2">
+                    <div class="progress-bar" style="width: 80px; height: 8px;">
+                      <div class="progress-fill" style="width: 75%; background: linear-gradient(90deg, var(--warning-500), var(--warning-400));"></div>
+                    </div>
+                    <span style="font-weight: 600; color: var(--warning-500);">75%</span>
+                  </div>
+                </td>
+                <td>38 دقيقة</td>
+                <td>
+                  <div style="color: var(--warning-500);">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <span style="margin-right: 5px;">3.5</span>
+                  </div>
+                </td>
+                <td><span class="status-badge error">يحتاج تحسين</span></td>
+                <td><span class="status-badge warning"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> متأخر</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>خيارات التصدير والمشاركة</h2>
+        <p>صدّر تقاريرك بصيغ متعددة لسهولة المشاركة والأرشفة</p>
+      </div>
+      
+      <div class="content-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="content-card fade-in text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #dc2626, #ef4444); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h4>تصدير PDF</h4>
+          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">تقارير منسقة جاهزة للطباعة والمشاركة</p>
+          <button class="btn btn-secondary" style="width: 100%;">
+            <i class="fas fa-download"></i> تحميل PDF
+          </button>
+        </div>
+        
+        <div class="content-card fade-in delay-1 text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #059669, #10b981); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+            <i class="fas fa-file-excel"></i>
+          </div>
+          <h4>تصدير Excel</h4>
+          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">بيانات قابلة للتحرير والتحليل المتقدم</p>
+          <button class="btn btn-secondary" style="width: 100%;">
+            <i class="fas fa-download"></i> تحميل Excel
+          </button>
+        </div>
+        
+        <div class="content-card fade-in delay-2 text-center">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+            <i class="fas fa-share-nodes"></i>
+          </div>
+          <h4>مشاركة التقرير</h4>
+          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">شارك التقارير مع فريقك عبر رابط مباشر</p>
+          <button class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-link"></i> نسخ الرابط
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-800)); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.2), transparent 50%);"></div>
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="text-center">
+        <h2 style="color: white; margin-bottom: 20px;">احصل على تقارير مفصلة لأعمالك</h2>
+        <p style="color: var(--gray-300); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          استخدم تقاريرنا المتقدمة لاتخاذ قرارات أفضل وتحسين أداء فريقك
+        </p>
+        <div class="d-flex gap-3 justify-center flex-wrap">
+          <a href="support.html#contact" class="btn btn-secondary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span>ابدأ مجاناً</span>
+          </a>
+          <a href="alerts.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-bell"></i>
+            <span>التنبيهات</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <span>داش كورد</span>
+          </div>
+          <p>منصة متكاملة لإدارة أساطيل التوصيل والمندوبين باحترافية عالية، نساعدك على تحقيق أقصى كفاءة في عملياتك اللوجستية.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="vehicles.html">إدارة المركبات</a></li>
+            <li><a href="riders.html">إدارة المندوبين</a></li>
+            <li><a href="settlements.html">التسويات المالية</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>المزيد</h5>
+          <ul class="footer-links">
+            <li><a href="reports.html">التقارير</a></li>
+            <li><a href="alerts.html">التنبيهات</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li><a href="support.html#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>قانوني</h5>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسة الاستخدام</a></li>
+            <li><a href="support.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

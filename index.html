@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="حل متكامل لإدارة المركبات والمندوبين - نظام لوجستيات احترافي">
+  <title>داش كورد | حل متكامل لإدارة المركبات والمندوبين</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <span>داش كورد</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="index.html" class="active"><span>الرئيسية</span></a>
+        <a href="vehicles.html"><span>المركبات</span></a>
+        <a href="riders.html"><span>المندوبين</span></a>
+        <a href="settlements.html"><span>التسويات</span></a>
+        <a href="reports.html"><span>التقارير</span></a>
+        <a href="alerts.html"><span>التنبيهات</span></a>
+        <a href="support.html"><span>الدعم</span></a>
+        <a href="support.html#contact" class="navbar-cta">تواصل معنا</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle" style="right: 10%; animation-delay: 0s;"></div>
+      <div class="hero-particle" style="right: 20%; animation-delay: 2s;"></div>
+      <div class="hero-particle" style="right: 30%; animation-delay: 4s;"></div>
+      <div class="hero-particle" style="right: 50%; animation-delay: 6s;"></div>
+      <div class="hero-particle" style="right: 70%; animation-delay: 8s;"></div>
+      <div class="hero-particle" style="right: 80%; animation-delay: 10s;"></div>
+      <div class="hero-particle" style="right: 90%; animation-delay: 12s;"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-bolt"></i>
+          <span>نظام إدارة لوجستيات متكامل</span>
+        </div>
+        
+        <h1>حل متكامل لإدارة المركبات والمندوبين</h1>
+        
+        <p class="hero-subtitle">
+          نقدم لك منصة احترافية شاملة تمكنك من إدارة أسطولك بكفاءة عالية، من خلال أدوات متطورة للتتبع والتحليل والتقارير
+        </p>
+        
+        <div class="hero-features">
+          <div class="hero-feature">
+            <i class="fas fa-car"></i>
+            <span>إدارة مركبات</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-file-signature"></i>
+            <span>تفويض</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-clipboard-check"></i>
+            <span>فحص مركبات</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-users"></i>
+            <span>إدارة مندوبين</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-calendar-alt"></i>
+            <span>شيفتات</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-coins"></i>
+            <span>تسويات</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-chart-line"></i>
+            <span>تقارير</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-bell"></i>
+            <span>تنبيهات</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-headset"></i>
+            <span>دعم فني</span>
+          </div>
+        </div>
+        
+        <div class="d-flex gap-3 flex-wrap mb-5">
+          <a href="support.html#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span>ابدأ الآن</span>
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg">
+            <i class="fas fa-play-circle"></i>
+            <span>اكتشف المزيد</span>
+          </a>
+        </div>
+        
+        <div class="hero-brands">
+          <p class="hero-brands-label">متوافق مع منصات التوصيل الرائدة</p>
+          <div class="hero-brands-logos">
+            <div class="brand-logo">Jahez</div>
+            <div class="brand-logo">HungerStation</div>
+            <div class="brand-logo">Keeta</div>
+            <div class="brand-logo">The Chefs</div>
+            <div class="brand-logo">Toyo</div>
+            <div class="brand-logo">Parcels</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>خدماتنا الأساسية</h2>
+        <p>مجموعة متكاملة من الأدوات والخدمات المصممة خصيصاً لتلبية احتياجات قطاع اللوجستيات والتوصيل</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1: Vehicle Management -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>إدارة المركبات</h3>
+          <p>نظام شامل لإدارة أسطولك بالكامل، يشمل ملفات المركبات، التأمين، الصيانة، التفاويض، والفحص الدوري مع توثيق كامل بالصور والمستندات.</p>
+          <a href="vehicles.html" class="feature-link">
+            <span>استكشف المزيد</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Feature 2: Rider Management -->
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>إدارة المندوبين</h3>
+          <p>أدر فريق التوصيل باحترافية من خلال ملفات شاملة، متابعة الأداء، نظام الشيفتات، الحضور والانصراف، والإنتاجية اليومية.</p>
+          <a href="riders.html" class="feature-link">
+            <span>استكشف المزيد</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Feature 3: Financial Settlements -->
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>التسويات المالية</h3>
+          <p>لوحة تحكم مالية متكاملة لإدارة الكاش، الخصومات، المكافآت، العمولات، مع تحليلات دقيقة وكشوف حسابات تفصيلية.</p>
+          <a href="settlements.html" class="feature-link">
+            <span>استكشف المزيد</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Feature 4: Reports & Alerts -->
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3>التقارير والتنبيهات</h3>
+          <p>تقارير تفصيلية للأداء والشيفتات والمركبات والتسويات، مع نظام تنبيهات ذكي للمتابعة الفورية واتخاذ القرارات السريعة.</p>
+          <a href="reports.html" class="feature-link">
+            <span>استكشف المزيد</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">+500</div>
+          <div class="stat-label">مركبة مُدارة</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">+1200</div>
+          <div class="stat-label">مندوب نشط</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">+50K</div>
+          <div class="stat-label">شحنة شهرياً</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">نسبة الرضا</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>كيف يعمل النظام</h2>
+        <p>خطوات بسيطة للبدء في استخدام منصتنا وتحقيق أقصى استفادة من خدماتنا</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>1. التسجيل</h3>
+          <p>سجّل حسابك في دقائق معدودة وأضف بيانات شركتك الأساسية للبدء في استخدام النظام.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>2. الإعداد</h3>
+          <p>أضف مركباتك ومندوبيك وحدد الشيفتات والسياسات المالية حسب متطلبات عملك.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon">
+            <i class="fas fa-play"></i>
+          </div>
+          <h3>3. التشغيل</h3>
+          <p>ابدأ العمليات اليومية مع تتبع كامل للأداء والتسويات والتقارير الفورية.</p>
+        </div>
+        
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>4. النمو</h3>
+          <p>حلل البيانات واتخذ قرارات ذكية لتحسين الكفاءة وزيادة الإنتاجية باستمرار.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-800)); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.2), transparent 50%);"></div>
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="text-center">
+        <h2 style="color: white; margin-bottom: 20px;">جاهز للبدء في تحسين عملياتك؟</h2>
+        <p style="color: var(--gray-300); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          انضم إلى مئات الشركات التي تستخدم داش كورد لإدارة أساطيلها بكفاءة واحترافية
+        </p>
+        <div class="d-flex gap-3 justify-center flex-wrap">
+          <a href="support.html#contact" class="btn btn-secondary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span>ابدأ مجاناً</span>
+          </a>
+          <a href="support.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-phone"></i>
+            <span>تحدث مع فريقنا</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <span>داش كورد</span>
+          </div>
+          <p>منصة متكاملة لإدارة أساطيل التوصيل والمندوبين باحترافية عالية، نساعدك على تحقيق أقصى كفاءة في عملياتك اللوجستية.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="vehicles.html">إدارة المركبات</a></li>
+            <li><a href="riders.html">إدارة المندوبين</a></li>
+            <li><a href="settlements.html">التسويات المالية</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>المزيد</h5>
+          <ul class="footer-links">
+            <li><a href="reports.html">التقارير</a></li>
+            <li><a href="alerts.html">التنبيهات</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li><a href="support.html#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>قانوني</h5>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسة الاستخدام</a></li>
+            <li><a href="support.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

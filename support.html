@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="الدعم الفني - نحن هنا لمساعدتك">
+  <title>الدعم الفني | داش كورد</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <span>داش كورد</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="index.html"><span>الرئيسية</span></a>
+        <a href="vehicles.html"><span>المركبات</span></a>
+        <a href="riders.html"><span>المندوبين</span></a>
+        <a href="settlements.html"><span>التسويات</span></a>
+        <a href="reports.html"><span>التقارير</span></a>
+        <a href="alerts.html"><span>التنبيهات</span></a>
+        <a href="support.html" class="active"><span>الدعم</span></a>
+        <a href="support.html#contact" class="navbar-cta">تواصل معنا</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>الدعم الفني</span>
+      </div>
+      <h1>مركز الدعم والمساعدة</h1>
+      <p>فريق دعم متخصص على مدار الساعة لمساعدتك في كل ما تحتاجه</p>
+    </div>
+  </section>
+
+  <!-- Support Options Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>كيف يمكننا مساعدتك؟</h2>
+        <p>اختر الطريقة المناسبة للتواصل معنا</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Live Chat -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));">
+            <i class="fas fa-comments" style="color: var(--primary-500);"></i>
+          </div>
+          <h3>دعم فني مباشر</h3>
+          <p>تواصل مع فريق الدعم الفني مباشرة عبر الدردشة المباشرة للحصول على مساعدة فورية.</p>
+          <a href="#" class="feature-link">
+            <span>بدء المحادثة</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Support Tickets -->
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));">
+            <i class="fas fa-ticket" style="color: var(--success-500);"></i>
+          </div>
+          <h3>فورم تذاكر دعم</h3>
+          <p>أرسل تذكرة دعم وسيتم الرد عليك في أقرب وقت من فريقنا المتخصص.</p>
+          <a href="#contact" class="feature-link">
+            <span>إنشاء تذكرة</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- FAQ -->
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));">
+            <i class="fas fa-circle-question" style="color: var(--warning-500);"></i>
+          </div>
+          <h3>أسئلة شائعة</h3>
+          <p>تصفح قائمة الأسئلة الشائعة للعثور على إجابات سريعة لاستفساراتك.</p>
+          <a href="#faq" class="feature-link">
+            <span>عرض الأسئلة</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        
+        <!-- Track Ticket -->
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));">
+            <i class="fas fa-search" style="color: #8b5cf6;"></i>
+          </div>
+          <h3>تتبع حالة التذكرة</h3>
+          <p>تابع حالة تذكرتك وتواصل مع فريق الدعم بشأنها.</p>
+          <a href="#" class="feature-link">
+            <span>تتبع التذكرة</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="content-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>تواصل معنا</h2>
+        <p>أرسل لنا رسالتك وسنرد عليك في أقرب وقت</p>
+      </div>
+      
+      <div class="content-grid" style="max-width: 1000px; margin: 0 auto;">
+        <!-- Contact Form -->
+        <div class="content-card fade-in" style="padding: 40px;">
+          <h4 style="margin-bottom: 30px; font-size: 1.25rem;">
+            <i class="fas fa-paper-plane" style="color: var(--primary-500); margin-left: 10px;"></i>
+            إرسال رسالة
+          </h4>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="name">الاسم الكامل *</label>
+              <input type="text" id="name" class="form-input" placeholder="أدخل اسمك الكامل" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">البريد الإلكتروني *</label>
+              <input type="email" id="email" class="form-input" placeholder="example@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="phone">رقم الجوال</label>
+              <input type="tel" id="phone" class="form-input" placeholder="+966 5XX XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="subject">الموضوع *</label>
+              <select id="subject" class="form-select" required>
+                <option value="">اختر الموضوع</option>
+                <option value="technical">مشكلة تقنية</option>
+                <option value="billing">استفسار مالي</option>
+                <option value="account">مشكلة في الحساب</option>
+                <option value="feature">اقتراح ميزة جديدة</option>
+                <option value="other">أخرى</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="message">الرسالة *</label>
+              <textarea id="message" class="form-textarea" placeholder="اكتب رسالتك هنا..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i>
+              إرسال الرسالة
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="fade-in delay-1" style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Quick Contact -->
+          <div class="content-card" style="padding: 30px;">
+            <h4 style="margin-bottom: 24px; font-size: 1.1rem;">
+              <i class="fas fa-phone-volume" style="color: var(--primary-500); margin-left: 10px;"></i>
+              تواصل سريع
+            </h4>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div class="d-flex align-center gap-3">
+                <div style="width: 48px; height: 48px; background: var(--primary-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <p style="color: var(--gray-500); font-size: 0.9rem; margin-bottom: 4px;">الهاتف</p>
+                  <p style="font-weight: 600; color: var(--gray-800);">+966 11 XXX XXXX</p>
+                </div>
+              </div>
+              
+              <div class="d-flex align-center gap-3">
+                <div style="width: 48px; height: 48px; background: var(--success-400); background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--success-500);">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <p style="color: var(--gray-500); font-size: 0.9rem; margin-bottom: 4px;">واتساب</p>
+                  <p style="font-weight: 600; color: var(--gray-800);">+966 5XX XXX XXXX</p>
+                </div>
+              </div>
+              
+              <div class="d-flex align-center gap-3">
+                <div style="width: 48px; height: 48px; background: var(--error-400); background: rgba(239, 68, 68, 0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--error-500);">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <p style="color: var(--gray-500); font-size: 0.9rem; margin-bottom: 4px;">البريد الإلكتروني</p>
+                  <p style="font-weight: 600; color: var(--gray-800);">support@fleetpro.sa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Working Hours -->
+          <div class="content-card" style="padding: 30px;">
+            <h4 style="margin-bottom: 24px; font-size: 1.1rem;">
+              <i class="fas fa-clock" style="color: var(--warning-500); margin-left: 10px;"></i>
+              ساعات العمل
+            </h4>
+            
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="d-flex justify-between">
+                <span style="color: var(--gray-600);">الأحد - الخميس</span>
+                <span style="font-weight: 600; color: var(--gray-800);">8:00 ص - 6:00 م</span>
+              </div>
+              <div class="d-flex justify-between">
+                <span style="color: var(--gray-600);">الجمعة</span>
+                <span style="font-weight: 600; color: var(--error-500);">مغلق</span>
+              </div>
+              <div class="d-flex justify-between">
+                <span style="color: var(--gray-600);">السبت</span>
+                <span style="font-weight: 600; color: var(--gray-800);">9:00 ص - 3:00 م</span>
+              </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 16px; background: var(--primary-100); border-radius: var(--radius-md);">
+              <p style="color: var(--primary-700); font-size: 0.9rem;">
+                <i class="fas fa-headset" style="margin-left: 8px;"></i>
+                الدعم الفني الطارئ متاح 24/7
+              </p>
+            </div>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="content-card" style="padding: 30px;">
+            <h4 style="margin-bottom: 24px; font-size: 1.1rem;">
+              <i class="fas fa-share-alt" style="color: var(--accent-500); margin-left: 10px;"></i>
+              تابعنا
+            </h4>
+            
+            <div class="d-flex gap-3">
+              <a href="#" style="width: 48px; height: 48px; background: var(--gray-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--gray-600); font-size: 1.25rem; transition: var(--transition-base);">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" style="width: 48px; height: 48px; background: var(--gray-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--gray-600); font-size: 1.25rem; transition: var(--transition-base);">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" style="width: 48px; height: 48px; background: var(--gray-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--gray-600); font-size: 1.25rem; transition: var(--transition-base);">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" style="width: 48px; height: 48px; background: var(--gray-100); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--gray-600); font-size: 1.25rem; transition: var(--transition-base);">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>الأسئلة الشائعة</h2>
+        <p>إجابات على الأسئلة الأكثر شيوعاً</p>
+      </div>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item active fade-in">
+          <div class="faq-question">
+            <h5>كيف يمكنني تسجيل حساب جديد؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              يمكنك تسجيل حساب جديد عن طريق النقر على زر "ابدأ مجاناً" في الصفحة الرئيسية، ثم ملء البيانات المطلوبة (الاسم، البريد الإلكتروني، رقم الجوال، واسم الشركة). سيتم إرسال رسالة تأكيد إلى بريدك الإلكتروني لتفعيل الحساب.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item fade-in delay-1">
+          <div class="faq-question">
+            <h5>ما هي طرق الدفع المتاحة؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              نقبل عدة طرق للدفع تشمل: بطاقات الائتمان (Visa, Mastercard, Mada)، التحويل البنكي، وخدمة Apple Pay. يمكنك اختيار الدفع الشهري أو السنوي حسب تفضيلك.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item fade-in delay-2">
+          <div class="faq-question">
+            <h5>هل يمكنني إضافة عدة مستخدمين لحسابي؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              نعم، يمكنك إضافة عدد غير محدود من المستخدمين لحسابك مع تحديد صلاحيات مختلفة لكل مستخدم. يمكنك منح صلاحيات القراءة فقط أو صلاحيات التعديل الكاملة حسب دور كل مستخدم.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item fade-in delay-3">
+          <div class="faq-question">
+            <h5>كيف يمكنني ربط النظام مع منصات التوصيل؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              يدعم نظامنا الربط مع أشهر منصات التوصيل (Jahez, HungerStation, Keeta, وغيرها) عن طريق API. يمكنك التواصل مع فريق الدعم الفني للحصول على مفاتيح الربط والمساعدة في عملية التكامل.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item fade-in delay-4">
+          <div class="faq-question">
+            <h5>هل بياناتي آمنة في النظام؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              نعم، نستخدم أعلى معايير الأمان لحماية بياناتك. جميع البيانات مشفرة باستخدام SSL، ونقوم بعمل نسخ احتياطية يومية. كما أن خوادمنا موجودة في مراكز بيانات معتمدة تتبع أعلى معايير الأمان العالمية.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 6 -->
+        <div class="faq-item fade-in delay-5">
+          <div class="faq-question">
+            <h5>هل يوجد تطبيق للجوال؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              نعم، يتوفر تطبيق داش كورد على كل من متجر Apple App Store و Google Play Store. يمكنك من خلال التطبيق متابعة جميع العمليات، استلام التنبيهات الفورية، وإدارة فريقك من أي مكان.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 7 -->
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <h5>ما هي مدة الفترة التجريبية؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              نوفر فترة تجريبية مجانية لمدة 14 يوماً مع جميع المميزات الكاملة. لا يُطلب منك إدخال بيانات بطاقة الدفع خلال الفترة التجريبية، ويمكنك إلغاء الاشتراك في أي وقت.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 8 -->
+        <div class="faq-item fade-in delay-1">
+          <div class="faq-question">
+            <h5>كيف يمكنني تصدير تقاريري؟</h5>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              يمكنك تصدير جميع التقارير بصيغ متعددة (PDF, Excel, CSV). انتقل إلى صفحة التقارير، اختر التقرير المطلوب، حدد الفترة الزمنية، ثم انقر على زر التصدير واختر الصيغة المناسبة.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticket Tracking Section -->
+  <section class="content-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>تتبع حالة التذكرة</h2>
+        <p>أدخل رقم التذكرة لمعرفة حالتها</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div class="content-card fade-in" style="padding: 40px;">
+          <div class="d-flex gap-2" style="flex-wrap: wrap;">
+            <input type="text" class="form-input" placeholder="أدخل رقم التذكرة (مثال: TKT-12345)" style="flex: 1; min-width: 200px;">
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+              بحث
+            </button>
+          </div>
+          
+          <!-- Sample Ticket Status (normally would be hidden until search) -->
+          <div style="margin-top: 30px; padding: 24px; background: var(--gray-50); border-radius: var(--radius-lg); display: none;">
+            <div class="d-flex justify-between align-center mb-3">
+              <span style="font-weight: 600; color: var(--gray-800);">TKT-12345</span>
+              <span class="status-badge warning"><i class="fas fa-clock"></i> قيد المعالجة</span>
+            </div>
+            <p style="color: var(--gray-600); margin-bottom: 16px;">مشكلة في تسجيل الدخول للحساب</p>
+            <div class="progress-bar" style="height: 8px;">
+              <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+            <p style="color: var(--gray-500); font-size: 0.85rem; margin-top: 12px;">آخر تحديث: منذ ساعتين</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">&lt;2h</div>
+          <div class="stat-label">متوسط وقت الرد</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">نسبة رضا العملاء</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">+10K</div>
+          <div class="stat-label">تذكرة تم حلها</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">دعم متواصل</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <span>داش كورد</span>
+          </div>
+          <p>منصة متكاملة لإدارة أساطيل التوصيل والمندوبين باحترافية عالية، نساعدك على تحقيق أقصى كفاءة في عملياتك اللوجستية.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="vehicles.html">إدارة المركبات</a></li>
+            <li><a href="riders.html">إدارة المندوبين</a></li>
+            <li><a href="settlements.html">التسويات المالية</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>المزيد</h5>
+          <ul class="footer-links">
+            <li><a href="reports.html">التقارير</a></li>
+            <li><a href="alerts.html">التنبيهات</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li><a href="support.html#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>قانوني</h5>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسة الاستخدام</a></li>
+            <li><a href="support.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

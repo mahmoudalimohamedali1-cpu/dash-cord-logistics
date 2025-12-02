@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="التنبيهات والإشعارات - نظام تنبيهات ذكي">
+  <title>التنبيهات | داش كورد</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <span>داش كورد</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="index.html"><span>الرئيسية</span></a>
+        <a href="vehicles.html"><span>المركبات</span></a>
+        <a href="riders.html"><span>المندوبين</span></a>
+        <a href="settlements.html"><span>التسويات</span></a>
+        <a href="reports.html"><span>التقارير</span></a>
+        <a href="alerts.html" class="active"><span>التنبيهات</span></a>
+        <a href="support.html"><span>الدعم</span></a>
+        <a href="support.html#contact" class="navbar-cta">تواصل معنا</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>التنبيهات</span>
+      </div>
+      <h1>مركز التنبيهات والإشعارات</h1>
+      <p>نظام تنبيهات ذكي يبقيك على اطلاع دائم بكل ما يهم عملك</p>
+    </div>
+  </section>
+
+  <!-- Alert Types Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>أنواع التنبيهات</h2>
+        <p>تنبيهات متنوعة تغطي جميع جوانب العمليات</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Performance Alerts -->
+        <div class="feature-card fade-in">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));">
+            <i class="fas fa-chart-line-down" style="color: var(--error-500);"></i>
+          </div>
+          <h3>تنبيهات الأداء</h3>
+          <p>إشعارات فورية عند انخفاض أداء المندوبين عن المستوى المطلوب مع توصيات للتحسين.</p>
+        </div>
+        
+        <!-- Cash Limit Alerts -->
+        <div class="feature-card fade-in delay-1">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));">
+            <i class="fas fa-money-bill-wave" style="color: var(--warning-500);"></i>
+          </div>
+          <h3>تنبيهات تجاوز حد الكاش</h3>
+          <p>تنبيه فوري عند تجاوز المندوب للحد اليومي المسموح به من الكاش.</p>
+        </div>
+        
+        <!-- Vehicle Alerts -->
+        <div class="feature-card fade-in delay-2">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.1));">
+            <i class="fas fa-car-burst" style="color: var(--accent-500);"></i>
+          </div>
+          <h3>مشاكل المركبات</h3>
+          <p>إشعارات عن أي مشاكل أو أعطال في المركبات تحتاج إلى اهتمام فوري.</p>
+        </div>
+        
+        <!-- Missing Documents -->
+        <div class="feature-card fade-in delay-3">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));">
+            <i class="fas fa-file-circle-exclamation" style="color: #8b5cf6;"></i>
+          </div>
+          <h3>مستندات ناقصة</h3>
+          <p>تنبيهات عن المستندات المطلوبة الناقصة أو المنتهية الصلاحية.</p>
+        </div>
+        
+        <!-- Settlement Delays -->
+        <div class="feature-card fade-in delay-4">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));">
+            <i class="fas fa-clock" style="color: var(--success-500);"></i>
+          </div>
+          <h3>تأخر التسويات</h3>
+          <p>إشعارات عند تأخر التسويات المالية عن المواعيد المحددة.</p>
+        </div>
+        
+        <!-- System Alerts -->
+        <div class="feature-card fade-in delay-5">
+          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));">
+            <i class="fas fa-server" style="color: var(--primary-500);"></i>
+          </div>
+          <h3>تنبيهات النظام</h3>
+          <p>إشعارات عن تحديثات النظام والصيانة المجدولة والميزات الجديدة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Alerts Section -->
+  <section class="content-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>التنبيهات الأخيرة</h2>
+        <p>آخر التنبيهات والإشعارات في الوقت الفعلي</p>
+      </div>
+      
+      <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+        <!-- Critical Alert -->
+        <div class="alert-item error fade-in">
+          <div class="alert-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">انخفاض حاد في أداء المندوب</div>
+            <div class="alert-text">المندوب أحمد الغامدي - نسبة النجاح انخفضت إلى 65%</div>
+          </div>
+          <div class="alert-time">منذ 5 دقائق</div>
+        </div>
+        
+        <!-- Warning Alert -->
+        <div class="alert-item warning fade-in delay-1">
+          <div class="alert-icon">
+            <i class="fas fa-money-bill"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">تجاوز حد الكاش اليومي</div>
+            <div class="alert-text">المندوب خالد العتيبي تجاوز الحد بمبلغ 500 ريال</div>
+          </div>
+          <div class="alert-time">منذ 15 دقيقة</div>
+        </div>
+        
+        <!-- Info Alert -->
+        <div class="alert-item info fade-in delay-2">
+          <div class="alert-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">موعد صيانة المركبة</div>
+            <div class="alert-text">المركبة رقم أ ب ج 1234 - موعد الصيانة غداً</div>
+          </div>
+          <div class="alert-time">منذ 30 دقيقة</div>
+        </div>
+        
+        <!-- Warning Alert -->
+        <div class="alert-item warning fade-in delay-3">
+          <div class="alert-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">مستند منتهي الصلاحية</div>
+            <div class="alert-text">رخصة قيادة المندوب فهد السعيد تنتهي خلال 7 أيام</div>
+          </div>
+          <div class="alert-time">منذ 45 دقيقة</div>
+        </div>
+        
+        <!-- Success Alert -->
+        <div class="alert-item success fade-in delay-4">
+          <div class="alert-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">تسوية مكتملة</div>
+            <div class="alert-text">تمت تسوية 15 مندوب بنجاح للفترة الأسبوعية</div>
+          </div>
+          <div class="alert-time">منذ ساعة</div>
+        </div>
+        
+        <!-- Error Alert -->
+        <div class="alert-item error fade-in delay-5">
+          <div class="alert-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">انتهاء تأمين المركبة</div>
+            <div class="alert-text">تأمين المركبة رقم د هـ و 5678 منتهي الصلاحية</div>
+          </div>
+          <div class="alert-time">منذ ساعتين</div>
+        </div>
+        
+        <!-- Info Alert -->
+        <div class="alert-item info fade-in">
+          <div class="alert-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-title">غياب مندوب</div>
+            <div class="alert-text">المندوب عبدالله الحربي غائب عن الشيفت الصباحي</div>
+          </div>
+          <div class="alert-time">منذ 3 ساعات</div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <button class="btn btn-secondary">
+          <i class="fas fa-eye"></i>
+          عرض جميع التنبيهات
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert Settings Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>إعدادات التنبيهات</h2>
+        <p>تحكم في كيفية ووقت استلام التنبيهات</p>
+      </div>
+      
+      <div class="content-grid" style="max-width: 900px; margin: 0 auto;">
+        <!-- Email Notifications -->
+        <div class="content-card fade-in">
+          <div class="content-card-header">
+            <div class="content-card-icon" style="background: linear-gradient(135deg, var(--primary-500), var(--primary-600));">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>إشعارات البريد الإلكتروني</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات الأداء</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات الكاش</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات المركبات</span>
+              <div style="width: 50px; height: 26px; background: var(--gray-300); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>ملخص يومي</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Push Notifications -->
+        <div class="content-card fade-in delay-1">
+          <div class="content-card-header">
+            <div class="content-card-icon" style="background: linear-gradient(135deg, var(--warning-500), var(--warning-400));">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h4>إشعارات الجوال</h4>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات فورية</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات الطوارئ</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>تنبيهات التسويات</span>
+              <div style="width: 50px; height: 26px; background: var(--success-500); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+            <div class="content-list-item" style="justify-content: space-between;">
+              <span>صوت التنبيه</span>
+              <div style="width: 50px; height: 26px; background: var(--gray-300); border-radius: 13px; position: relative; cursor: pointer;">
+                <div style="width: 22px; height: 22px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px; box-shadow: var(--shadow-sm);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">+15K</div>
+          <div class="stat-label">تنبيه يومياً</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">نسبة الوصول</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">&lt;1s</div>
+          <div class="stat-label">وقت الإرسال</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">مراقبة مستمرة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center">
+        <h2 style="margin-bottom: 20px;">ابق على اطلاع دائم</h2>
+        <p style="color: var(--gray-500); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          نظام التنبيهات الذكي يضمن لك عدم تفويت أي حدث مهم في عملك
+        </p>
+        <div class="d-flex gap-3 justify-center flex-wrap">
+          <a href="support.html#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span>ابدأ مجاناً</span>
+          </a>
+          <a href="support.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-headset"></i>
+            <span>الدعم الفني</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <span>داش كورد</span>
+          </div>
+          <p>منصة متكاملة لإدارة أساطيل التوصيل والمندوبين باحترافية عالية، نساعدك على تحقيق أقصى كفاءة في عملياتك اللوجستية.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="vehicles.html">إدارة المركبات</a></li>
+            <li><a href="riders.html">إدارة المندوبين</a></li>
+            <li><a href="settlements.html">التسويات المالية</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>المزيد</h5>
+          <ul class="footer-links">
+            <li><a href="reports.html">التقارير</a></li>
+            <li><a href="alerts.html">التنبيهات</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li><a href="support.html#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h5>قانوني</h5>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسة الاستخدام</a></li>
+            <li><a href="support.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 داش كورد. جميع الحقوق محفوظة.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
