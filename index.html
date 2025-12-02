@@ -238,24 +238,20 @@
       
       <div style="max-width: 1100px; margin: 0 auto; position: relative; min-height: 700px;">
         <!-- SVG Layer for Lines -->
-        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
+        <svg viewBox="0 0 1100 700" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
           <defs>
             <!-- Animated gradient for lines -->
-            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3">
-                <animate attributeName="stop-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" />
-              </stop>
+            <linearGradient id="lineGradient">
+              <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2"/>
               <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1">
-                <animate attributeName="stop-opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+                <animate attributeName="stop-opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
               </stop>
-              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3">
-                <animate attributeName="stop-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" />
-              </stop>
+              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2"/>
             </linearGradient>
             
             <!-- Glow filter -->
             <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
               <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
@@ -263,62 +259,73 @@
             </filter>
           </defs>
           
-          <!-- Lines from center to each feature -->
-          <!-- Line to إدارة مركبات (Top) -->
-          <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Lines from center (550, 350) to each feature -->
+          <!-- Line to إدارة مركبات (Top) - 550, 55 -->
+          <path d="M 550 350 Q 550 200 550 110" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to تفويض (Top Right) -->
-          <line x1="50%" y1="50%" x2="85%" y2="22%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to تفويض (Top Right) - 935, 135 -->
+          <path d="M 550 350 Q 700 250 935 135" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to فحص مركبات (Right) -->
-          <line x1="50%" y1="50%" x2="93%" y2="50%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to فحص مركبات (Right) - 1025, 350 -->
+          <path d="M 550 350 Q 750 350 1025 350" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to إدارة مندوبين (Bottom Right) -->
-          <line x1="50%" y1="50%" x2="85%" y2="78%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to إدارة مناديب (Bottom Right) - 935, 565 -->
+          <path d="M 550 350 Q 700 450 935 565" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to شيفتات (Bottom) -->
-          <line x1="50%" y1="50%" x2="50%" y2="85%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to شيفتات (Bottom) - 550, 645 -->
+          <path d="M 550 350 Q 550 500 550 590" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to تسويات (Bottom Left) -->
-          <line x1="50%" y1="50%" x2="15%" y2="78%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to تسويات (Bottom Left) - 165, 565 -->
+          <path d="M 550 350 Q 400 450 165 565" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to تقارير (Left) -->
-          <line x1="50%" y1="50%" x2="7%" y2="50%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to تقارير (Left) - 75, 350 -->
+          <path d="M 550 350 Q 350 350 75 350" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to تنبيهات (Top Left) -->
-          <line x1="50%" y1="50%" x2="15%" y2="22%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to تنبيهات (Top Left) - 165, 135 -->
+          <path d="M 550 350 Q 400 250 165 135" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Line to دعم فني (Top between center and left) -->
-          <line x1="50%" y1="50%" x2="28%" y2="12%" stroke="url(#lineGradient)" stroke-width="3" filter="url(#glow)" stroke-dasharray="8,4">
-            <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-          </line>
+          <!-- Line to دعم فني (Top Left-Center) - 310, 95 -->
+          <path d="M 550 350 Q 450 200 310 95" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
+          </path>
           
-          <!-- Animated particles along lines -->
-          <circle r="4" fill="#06b6d4" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 550 105"/>
+          <!-- Animated particles along some lines -->
+          <circle r="5" fill="#06b6d4" filter="url(#glow)">
+            <animateMotion dur="3s" repeatCount="indefinite">
+              <mpath href="#path1"/>
+            </animateMotion>
           </circle>
-          <circle r="4" fill="#8b5cf6" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 935 154"/>
+          <path id="path1" d="M 550 350 Q 550 200 550 110" fill="none" stroke="none"/>
+          
+          <circle r="5" fill="#8b5cf6" filter="url(#glow)">
+            <animateMotion dur="3s" repeatCount="indefinite">
+              <mpath href="#path2"/>
+            </animateMotion>
           </circle>
-          <circle r="4" fill="#10b981" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 1023 350"/>
+          <path id="path2" d="M 550 350 Q 700 250 935 135" fill="none" stroke="none"/>
+          
+          <circle r="5" fill="#10b981" filter="url(#glow)">
+            <animateMotion dur="3s" repeatCount="indefinite">
+              <mpath href="#path3"/>
+            </animateMotion>
           </circle>
+          <path id="path3" d="M 550 350 Q 750 350 1025 350" fill="none" stroke="none"/>
         </svg>
         
         <!-- Central Logo -->
