@@ -226,6 +226,236 @@
     </div>
   </section>
 
+  <!-- Platform Ecosystem Section -->
+  <section class="section" style="background: linear-gradient(180deg, #0f172a, #1e293b); padding: 120px 0; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1), transparent 70%);"></div>
+    
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="section-header text-center" style="margin-bottom: 80px;">
+        <h2 style="color: white; font-size: 2.5rem; margin-bottom: 16px;">منظومة متكاملة</h2>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">جميع الخدمات والمزايا في منصة واحدة</p>
+      </div>
+      
+      <div style="max-width: 1100px; margin: 0 auto; position: relative; min-height: 700px;">
+        <!-- Central Logo -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20;">
+          <div style="width: 180px; height: 180px; background: linear-gradient(135deg, #06b6d4, #0284c7); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(6, 182, 212, 0.4); animation: pulse-glow 3s ease-in-out infinite;">
+            <i class="fas fa-truck-fast" style="font-size: 5rem; color: white;"></i>
+          </div>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; border: 2px solid rgba(6, 182, 212, 0.3); border-radius: 50%; animation: rotate-ring 20s linear infinite;"></div>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 260px; height: 260px; border: 2px dashed rgba(6, 182, 212, 0.2); border-radius: 50%; animation: rotate-ring-reverse 25s linear infinite;"></div>
+        </div>
+        
+        <!-- Feature Circles with Animated Lines -->
+        <!-- 1. إدارة مركبات - Top -->
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+          <svg style="position: absolute; top: 90px; left: 50%; transform: translateX(-50%); width: 2px; height: 160px; z-index: 1;">
+            <line x1="1" y1="0" x2="1" y2="160" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(6, 182, 212, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#06b6d4'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(6, 182, 212, 0.3)'">
+            <i class="fas fa-car" style="font-size: 2rem; color: #06b6d4; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">إدارة مركبات</span>
+          </div>
+        </div>
+        
+        <!-- 2. تفويض - Top Right -->
+        <div style="position: absolute; top: 80px; right: 80px;">
+          <svg style="position: absolute; bottom: 45px; left: -100px; width: 180px; height: 2px; z-index: 1;">
+            <line x1="0" y1="1" x2="180" y2="1" stroke="url(#gradient2)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(139, 92, 246, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 0.5s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#8b5cf6'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(139, 92, 246, 0.3)'">
+            <i class="fas fa-file-signature" style="font-size: 2rem; color: #8b5cf6; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">تفويض</span>
+          </div>
+        </div>
+        
+        <!-- 3. فحص مركبات - Right -->
+        <div style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%);">
+          <svg style="position: absolute; top: 50%; left: -140px; transform: translateY(-50%); width: 140px; height: 2px; z-index: 1;">
+            <line x1="0" y1="1" x2="140" y2="1" stroke="url(#gradient3)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 1s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#10b981'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(16, 185, 129, 0.3)'">
+            <i class="fas fa-clipboard-check" style="font-size: 2rem; color: #10b981; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">فحص مركبات</span>
+          </div>
+        </div>
+        
+        <!-- 4. إدارة مندوبين - Bottom Right -->
+        <div style="position: absolute; bottom: 80px; right: 80px;">
+          <svg style="position: absolute; top: -100px; left: -100px; width: 180px; height: 2px; transform: rotate(-45deg); z-index: 1;">
+            <line x1="0" y1="1" x2="180" y2="1" stroke="url(#gradient4)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 1.5s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#f59e0b'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+            <i class="fas fa-users" style="font-size: 2rem; color: #f59e0b; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">إدارة مناديب</span>
+          </div>
+        </div>
+        
+        <!-- 5. شيفتات - Bottom -->
+        <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+          <svg style="position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%); width: 2px; height: 160px; z-index: 1;">
+            <line x1="1" y1="0" x2="1" y2="160" stroke="url(#gradient5)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient5" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(239, 68, 68, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 2s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#ef4444'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(239, 68, 68, 0.3)'">
+            <i class="fas fa-calendar-alt" style="font-size: 2rem; color: #ef4444; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">شيفتات</span>
+          </div>
+        </div>
+        
+        <!-- 6. تسويات - Bottom Left -->
+        <div style="position: absolute; bottom: 80px; left: 80px;">
+          <svg style="position: absolute; top: -100px; right: -100px; width: 180px; height: 2px; transform: rotate(45deg); z-index: 1;">
+            <line x1="0" y1="1" x2="180" y2="1" stroke="url(#gradient6)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(124, 58, 237, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 2.5s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#7c3aed'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(124, 58, 237, 0.3)'">
+            <i class="fas fa-coins" style="font-size: 2rem; color: #7c3aed; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">تسويات</span>
+          </div>
+        </div>
+        
+        <!-- 7. تقارير - Left -->
+        <div style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%);">
+          <svg style="position: absolute; top: 50%; right: -140px; transform: translateY(-50%); width: 140px; height: 2px; z-index: 1;">
+            <line x1="0" y1="1" x2="140" y2="1" stroke="url(#gradient7)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient7" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(37, 99, 235, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 3s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(37, 99, 235, 0.3)'">
+            <i class="fas fa-chart-pie" style="font-size: 2rem; color: #2563eb; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">تقارير</span>
+          </div>
+        </div>
+        
+        <!-- 8. تنبيهات - Top Left -->
+        <div style="position: absolute; top: 80px; left: 80px;">
+          <svg style="position: absolute; bottom: 45px; right: -100px; width: 180px; height: 2px; z-index: 1;">
+            <line x1="0" y1="1" x2="180" y2="1" stroke="url(#gradient8)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient8" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(251, 191, 36, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 3.5s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#fbbf24'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(251, 191, 36, 0.3)'">
+            <i class="fas fa-bell" style="font-size: 2rem; color: #fbbf24; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">تنبيهات</span>
+          </div>
+        </div>
+        
+        <!-- 9. دعم فني - Top Center (between Top and Top Left) -->
+        <div style="position: absolute; top: 40px; left: 30%;">
+          <svg style="position: absolute; bottom: 45px; right: -60px; width: 120px; height: 2px; transform: rotate(30deg); z-index: 1;">
+            <line x1="0" y1="1" x2="120" y2="1" stroke="url(#gradient9)" stroke-width="2" stroke-dasharray="5,5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1s" repeatCount="indefinite"/>
+            </line>
+            <defs>
+              <linearGradient id="gradient9" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="width: 110px; height: 110px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 2px solid rgba(236, 72, 153, 0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease; animation: float 3s ease-in-out infinite 4s;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderColor='#ec4899'" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(236, 72, 153, 0.3)'">
+            <i class="fas fa-headset" style="font-size: 2rem; color: #ec4899; margin-bottom: 8px;"></i>
+            <span style="color: white; font-size: 0.85rem; font-weight: 600; text-align: center;">دعم فني</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: 0 20px 60px rgba(6, 182, 212, 0.4), 0 0 0 0 rgba(6, 182, 212, 0.7);
+        }
+        50% {
+          box-shadow: 0 20px 80px rgba(6, 182, 212, 0.6), 0 0 0 20px rgba(6, 182, 212, 0);
+        }
+      }
+      
+      @keyframes rotate-ring {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      
+      @keyframes rotate-ring-reverse {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(-360deg); }
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+    </style>
+  </section>
+
   <!-- How It Works Section -->
   <section class="section bg-white">
     <div class="container">
