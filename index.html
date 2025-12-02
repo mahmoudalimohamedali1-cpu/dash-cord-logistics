@@ -237,56 +237,87 @@
       </div>
       
       <div style="max-width: 1100px; margin: 0 auto; position: relative; min-height: 700px;">
-        <!-- Lines Layer -->
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; z-index: 5; pointer-events: none;">
-          <!-- Line to Top (إدارة مركبات) -->
-          <div style="position: absolute; top: calc(50% - 90px); left: 50%; width: 2px; height: 160px; background: linear-gradient(to bottom, transparent, #06b6d4, #06b6d4, transparent); transform: translateX(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+        <!-- SVG Lines Layer -->
+        <svg width="1100" height="700" style="position: absolute; top: 0; left: 0; z-index: 5; pointer-events: none;">
+          <defs>
+            <!-- Glow filter -->
+            <filter id="lineGlow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
           
-          <!-- Line to Top Right (تفويض) -->
-          <div style="position: absolute; top: calc(50% - 150px); left: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(-35deg); transform-origin: left; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Center point: 550, 350 -->
+          <!-- All lines start from center (550, 350) -->
           
-          <!-- Line to Right (فحص مركبات) -->
-          <div style="position: absolute; top: 50%; left: calc(50% + 90px); width: 340px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: translateY(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to إدارة مركبات (Top: 550, 55) -->
+          <line x1="550" y1="350" x2="550" y2="110" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Bottom Right (إدارة مناديب) -->
-          <div style="position: absolute; top: calc(50% + 10px); left: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(35deg); transform-origin: left; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to تفويض (Top Right: 935, 135) -->
+          <line x1="550" y1="350" x2="935" y2="135" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Bottom (شيفتات) -->
-          <div style="position: absolute; top: calc(50% + 90px); left: 50%; width: 2px; height: 160px; background: linear-gradient(to bottom, transparent, #06b6d4, #06b6d4, transparent); transform: translateX(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to فحص مركبات (Right: 1025, 350) -->
+          <line x1="550" y1="350" x2="1025" y2="350" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Bottom Left (تسويات) -->
-          <div style="position: absolute; top: calc(50% + 10px); right: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(-35deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to إدارة مناديب (Bottom Right: 935, 565) -->
+          <line x1="550" y1="350" x2="935" y2="565" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Left (تقارير) -->
-          <div style="position: absolute; top: 50%; right: calc(50% + 90px); width: 340px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: translateY(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to شيفتات (Bottom: 550, 645) -->
+          <line x1="550" y1="350" x2="550" y2="590" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Top Left (تنبيهات) -->
-          <div style="position: absolute; top: calc(50% - 150px); right: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(35deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+          <!-- Line to تسويات (Bottom Left: 165, 565) -->
+          <line x1="550" y1="350" x2="165" y2="565" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          <!-- Line to Top Left Center (دعم فني) -->
-          <div style="position: absolute; top: calc(50% - 180px); right: calc(50% + 40px); width: 200px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(50deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
-        </div>
-        
-        <style>
-          .dashed-line {
-            background-size: 20px 100%, 100% 100%;
-            background-image: 
-              repeating-linear-gradient(
-                90deg,
-                #06b6d4 0px,
-                #06b6d4 10px,
-                transparent 10px,
-                transparent 20px
-              );
-            box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
-          }
+          <!-- Line to تقارير (Left: 75, 350) -->
+          <line x1="550" y1="350" x2="75" y2="350" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
           
-          @keyframes dashMove {
-            0% { opacity: 0.6; }
-            50% { opacity: 1; }
-            100% { opacity: 0.6; }
-          }
-        </style>
+          <!-- Line to تنبيهات (Top Left: 165, 135) -->
+          <line x1="550" y1="350" x2="165" y2="135" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
+          
+          <!-- Line to دعم فني (Top Left-Center: 310, 95) -->
+          <line x1="550" y1="350" x2="310" y2="95" stroke="#06b6d4" stroke-width="3" stroke-dasharray="12 6" filter="url(#lineGlow)">
+            <animate attributeName="stroke-dashoffset" from="0" to="36" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+          </line>
+          
+          <!-- Animated particles on lines -->
+          <circle r="6" fill="#06b6d4" filter="url(#lineGlow)">
+            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 550 110"/>
+          </circle>
+          <circle r="6" fill="#8b5cf6" filter="url(#lineGlow)">
+            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 935 135"/>
+          </circle>
+          <circle r="6" fill="#10b981" filter="url(#lineGlow)">
+            <animateMotion dur="3s" repeatCount="indefinite" path="M 550 350 L 1025 350"/>
+          </circle>
+        </svg>
         
         <!-- Central Logo -->
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20;">
