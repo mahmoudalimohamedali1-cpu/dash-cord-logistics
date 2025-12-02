@@ -237,96 +237,56 @@
       </div>
       
       <div style="max-width: 1100px; margin: 0 auto; position: relative; min-height: 700px;">
-        <!-- SVG Layer for Lines -->
-        <svg viewBox="0 0 1100 700" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
-          <defs>
-            <!-- Animated gradient for lines -->
-            <linearGradient id="lineGradient">
-              <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2"/>
-              <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1">
-                <animate attributeName="stop-opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
-              </stop>
-              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2"/>
-            </linearGradient>
-            
-            <!-- Glow filter -->
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
+        <!-- Lines Layer -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; z-index: 5; pointer-events: none;">
+          <!-- Line to Top (إدارة مركبات) -->
+          <div style="position: absolute; top: calc(50% - 90px); left: 50%; width: 2px; height: 160px; background: linear-gradient(to bottom, transparent, #06b6d4, #06b6d4, transparent); transform: translateX(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Lines from center (550, 350) to each feature -->
-          <!-- Line to إدارة مركبات (Top) - 550, 55 -->
-          <path d="M 550 350 Q 550 200 550 110" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Top Right (تفويض) -->
+          <div style="position: absolute; top: calc(50% - 150px); left: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(-35deg); transform-origin: left; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to تفويض (Top Right) - 935, 135 -->
-          <path d="M 550 350 Q 700 250 935 135" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Right (فحص مركبات) -->
+          <div style="position: absolute; top: 50%; left: calc(50% + 90px); width: 340px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: translateY(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to فحص مركبات (Right) - 1025, 350 -->
-          <path d="M 550 350 Q 750 350 1025 350" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Bottom Right (إدارة مناديب) -->
+          <div style="position: absolute; top: calc(50% + 10px); left: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to right, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(35deg); transform-origin: left; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to إدارة مناديب (Bottom Right) - 935, 565 -->
-          <path d="M 550 350 Q 700 450 935 565" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Bottom (شيفتات) -->
+          <div style="position: absolute; top: calc(50% + 90px); left: 50%; width: 2px; height: 160px; background: linear-gradient(to bottom, transparent, #06b6d4, #06b6d4, transparent); transform: translateX(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to شيفتات (Bottom) - 550, 645 -->
-          <path d="M 550 350 Q 550 500 550 590" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Bottom Left (تسويات) -->
+          <div style="position: absolute; top: calc(50% + 10px); right: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(-35deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to تسويات (Bottom Left) - 165, 565 -->
-          <path d="M 550 350 Q 400 450 165 565" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Left (تقارير) -->
+          <div style="position: absolute; top: 50%; right: calc(50% + 90px); width: 340px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: translateY(-50%); animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to تقارير (Left) - 75, 350 -->
-          <path d="M 550 350 Q 350 350 75 350" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Top Left (تنبيهات) -->
+          <div style="position: absolute; top: calc(50% - 150px); right: calc(50% + 20px); width: 280px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(35deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
           
-          <!-- Line to تنبيهات (Top Left) - 165, 135 -->
-          <path d="M 550 350 Q 400 250 165 135" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
+          <!-- Line to Top Left Center (دعم فني) -->
+          <div style="position: absolute; top: calc(50% - 180px); right: calc(50% + 40px); width: 200px; height: 2px; background: linear-gradient(to left, transparent, #06b6d4, #06b6d4, transparent); transform: rotate(50deg); transform-origin: right; animation: dashMove 1.5s linear infinite;" class="dashed-line"></div>
+        </div>
+        
+        <style>
+          .dashed-line {
+            background-size: 20px 100%, 100% 100%;
+            background-image: 
+              repeating-linear-gradient(
+                90deg,
+                #06b6d4 0px,
+                #06b6d4 10px,
+                transparent 10px,
+                transparent 20px
+              );
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+          }
           
-          <!-- Line to دعم فني (Top Left-Center) - 310, 95 -->
-          <path d="M 550 350 Q 450 200 310 95" stroke="url(#lineGradient)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="10,5">
-            <animate attributeName="stroke-dashoffset" from="0" to="30" dur="1.5s" repeatCount="indefinite"/>
-          </path>
-          
-          <!-- Animated particles along some lines -->
-          <circle r="5" fill="#06b6d4" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite">
-              <mpath href="#path1"/>
-            </animateMotion>
-          </circle>
-          <path id="path1" d="M 550 350 Q 550 200 550 110" fill="none" stroke="none"/>
-          
-          <circle r="5" fill="#8b5cf6" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite">
-              <mpath href="#path2"/>
-            </animateMotion>
-          </circle>
-          <path id="path2" d="M 550 350 Q 700 250 935 135" fill="none" stroke="none"/>
-          
-          <circle r="5" fill="#10b981" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite">
-              <mpath href="#path3"/>
-            </animateMotion>
-          </circle>
-          <path id="path3" d="M 550 350 Q 750 350 1025 350" fill="none" stroke="none"/>
-        </svg>
+          @keyframes dashMove {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+          }
+        </style>
         
         <!-- Central Logo -->
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20;">
