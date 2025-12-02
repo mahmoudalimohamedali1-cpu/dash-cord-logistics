@@ -1,0 +1,47 @@
+<svg width="280" height="50" viewBox="0 0 280 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .letter { font-family: Arial Black, sans-serif; font-size: 38px; font-weight: 900; fill: none; stroke: #1a1a1a; stroke-width: 2; }
+  </style>
+  
+  <!-- D -->
+  <text x="0" y="38" class="letter">D</text>
+  
+  <!-- A -->
+  <text x="28" y="38" class="letter">A</text>
+  
+  <!-- S as U-turn arrow -->
+  <g transform="translate(60, 8)">
+    <path d="M 4 32 L 4 12 C 4 5 9 2 15 2 C 21 2 26 5 26 12 L 26 20" 
+          fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="26,24 22,18 30,18" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- H -->
+  <text x="92" y="38" class="letter">H</text>
+  
+  <!-- C -->
+  <text x="125" y="38" class="letter">C</text>
+  
+  <!-- O as Gear -->
+  <g transform="translate(168, 25)">
+    <!-- Main circle -->
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- Gear teeth -->
+    <rect x="-3" y="-18" width="6" height="5" fill="#1a1a1a"/>
+    <rect x="-3" y="13" width="6" height="5" fill="#1a1a1a"/>
+    <rect x="-18" y="-3" width="5" height="6" fill="#1a1a1a"/>
+    <rect x="13" y="-3" width="5" height="6" fill="#1a1a1a"/>
+    <rect x="8" y="-14" width="6" height="5" fill="#1a1a1a" transform="rotate(45 11 -11.5)"/>
+    <rect x="-14" y="-14" width="6" height="5" fill="#1a1a1a" transform="rotate(-45 -11 -11.5)"/>
+    <rect x="8" y="9" width="6" height="5" fill="#1a1a1a" transform="rotate(-45 11 11.5)"/>
+    <rect x="-14" y="9" width="6" height="5" fill="#1a1a1a" transform="rotate(45 -11 11.5)"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- R -->
+  <text x="195" y="38" class="letter">R</text>
+  
+  <!-- D -->
+  <text x="228" y="38" class="letter">D</text>
+</svg>

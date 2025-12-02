@@ -288,7 +288,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 50%, var(--primary-800) 100%);
+  background: linear-gradient(165deg, #0f172a 0%, #1e293b 40%, #334155 100%);
   overflow: hidden;
   padding-top: 80px;
 }
@@ -298,9 +298,8 @@ img {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.1) 0%, transparent 40%);
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -1736,5 +1735,29 @@ img {
 .footer .dashcord-logo {
   color: var(--white);
   font-size: 1.5rem;
+}
+
+/* DASHCORD Logo Image */
+.dashcord-logo-img {
+  height: 300px;
+  width: auto;
+  transition: var(--transition-base);
+  display: block;
+}
+
+.navbar-logo:hover .dashcord-logo-img {
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+  transform: scale(1.05);
+}
+
+.footer-logo .dashcord-logo-img {
+  height: 260px;
+  opacity: 0.9;
+  filter: invert(1) brightness(1.2);
+}
+
+.footer-logo .dashcord-logo-img:hover {
+  opacity: 1;
+  filter: invert(1) brightness(1.2) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
 }
 
