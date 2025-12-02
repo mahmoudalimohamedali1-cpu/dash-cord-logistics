@@ -1692,11 +1692,11 @@ img {
 .dashcord-logo {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0px;
   font-family: 'Readex Pro', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   color: var(--gray-900);
 }
 
