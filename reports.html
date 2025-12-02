@@ -16,6 +16,442 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === REPORTS PAGE CUSTOM STYLES === */
+    
+    .reports-hero {
+      min-height: 90vh;
+      background: linear-gradient(165deg, #1e40af 0%, #1e3a8a 40%, #1e293b 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+    
+    .reports-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
+    }
+    
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    .reports-hero-content {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .hero-text h1 {
+      color: var(--white);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+    
+    .hero-text h1 span {
+      background: linear-gradient(135deg, #60a5fa, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-text p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    
+    .hero-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      color: white;
+      font-size: 0.95rem;
+    }
+    
+    .hero-feature-item i {
+      color: #60a5fa;
+      font-size: 1.2rem;
+    }
+    
+    /* Reports Dashboard */
+    .reports-dashboard {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-2xl);
+      padding: 32px;
+      backdrop-filter: blur(20px);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    
+    .dashboard-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 600;
+    }
+    
+    .dashboard-title i {
+      color: #60a5fa;
+    }
+    
+    .export-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(59, 130, 246, 0.2);
+      border-radius: 100px;
+      color: #60a5fa;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .export-badge:hover {
+      background: rgba(59, 130, 246, 0.3);
+    }
+    
+    .report-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    
+    .report-type-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .report-type-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+    
+    .report-type-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    
+    .report-type-title {
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    
+    .report-type-count {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+    }
+    
+    /* Report Categories Section */
+    .categories-section {
+      padding: 100px 0;
+      background: white;
+    }
+    
+    .category-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 40px;
+      padding: 8px;
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+    }
+    
+    .category-tab {
+      padding: 12px 24px;
+      background: transparent;
+      border: none;
+      border-radius: var(--radius-md);
+      color: var(--gray-700);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    
+    .category-tab:hover {
+      background: white;
+    }
+    
+    .category-tab.active {
+      background: #3b82f6;
+      color: white;
+    }
+    
+    .reports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    
+    .report-card {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .report-card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+      transform: translateY(-6px);
+    }
+    
+    .report-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .report-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .report-icon.green {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+    
+    .report-icon.purple {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+    
+    .report-icon.orange {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+    
+    .report-card h3 {
+      font-size: 1.2rem;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+    
+    .report-card p {
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .report-meta {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gray-500);
+      font-size: 0.85rem;
+    }
+    
+    .meta-item i {
+      color: #3b82f6;
+    }
+    
+    /* Visualization Section */
+    .visualization-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--gray-50), white);
+    }
+    
+    .viz-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+    
+    .viz-large {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-2xl);
+      padding: 40px;
+    }
+    
+    .viz-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 32px;
+    }
+    
+    .line-chart {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+    
+    .line-path {
+      stroke: #3b82f6;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+    }
+    
+    .chart-grid-lines {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .grid-line {
+      width: 100%;
+      height: 1px;
+      background: var(--gray-200);
+    }
+    
+    .viz-stats {
+      display: grid;
+      gap: 20px;
+    }
+    
+    .viz-stat-card {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    
+    .viz-stat-card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.1);
+    }
+    
+    .viz-stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    
+    .viz-stat-label {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .viz-stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .viz-stat-value {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+    
+    .viz-stat-trend {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    
+    .viz-stat-trend.positive {
+      color: #10b981;
+    }
+    
+    .viz-stat-trend.negative {
+      color: #ef4444;
+    }
+    
+    @media (max-width: 768px) {
+      .reports-hero-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .report-types {
+        grid-template-columns: 1fr;
+      }
+      
+      .viz-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -47,429 +483,315 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hero Section -->
+  <section class="reports-hero">
+    <div class="hero-grid-pattern"></div>
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <i class="fas fa-chevron-left"></i>
-        <span>التقارير</span>
-      </div>
-      <h1>مركز التقارير</h1>
-      <p>تقارير شاملة ومفصلة لجميع جوانب العمليات مع إمكانية التصدير والفلترة</p>
-    </div>
-  </section>
-
-  <!-- Report Types Section -->
-  <section class="content-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>أنواع التقارير المتاحة</h2>
-        <p>مجموعة متنوعة من التقارير لتغطية جميع احتياجاتك</p>
-      </div>
-      
-      <div class="features-grid">
-        <!-- Daily Performance Reports -->
-        <div class="feature-card fade-in">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));">
-            <i class="fas fa-calendar-day" style="color: var(--primary-500);"></i>
-          </div>
-          <h3>تقارير الأداء اليومية</h3>
-          <p>تقارير مفصلة عن أداء المناديب والعمليات على أساس يومي مع مؤشرات الأداء الرئيسية.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Weekly Reports -->
-        <div class="feature-card fade-in delay-1">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));">
-            <i class="fas fa-calendar-week" style="color: var(--success-500);"></i>
-          </div>
-          <h3>تقارير أسبوعية</h3>
-          <p>ملخص أسبوعي شامل للأداء مع مقارنات بالأسابيع السابقة وتحليل الاتجاهات.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Shift Reports -->
-        <div class="feature-card fade-in delay-2">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1));">
-            <i class="fas fa-clock" style="color: #8b5cf6;"></i>
-          </div>
-          <h3>تقارير الشيفتات</h3>
-          <p>تقارير تفصيلية عن الشيفتات والحضور والانصراف ونسب الالتزام.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Vehicle Reports -->
-        <div class="feature-card fade-in delay-3">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.1));">
-            <i class="fas fa-car" style="color: var(--accent-500);"></i>
-          </div>
-          <h3>تقارير المركبات</h3>
-          <p>تقارير عن حالة المركبات والصيانة والتفاويض والفحوصات الدورية.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Settlement Reports -->
-        <div class="feature-card fade-in delay-4">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));">
-            <i class="fas fa-coins" style="color: var(--warning-500);"></i>
-          </div>
-          <h3>تقارير التسويات</h3>
-          <p>تقارير مالية شاملة عن التسويات والمدفوعات والمستحقات.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Notes Reports -->
-        <div class="feature-card fade-in delay-5">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.1));">
-            <i class="fas fa-sticky-note" style="color: #ec4899;"></i>
-          </div>
-          <h3>تقارير الملاحظات</h3>
-          <p>تجميع الملاحظات والتعليقات على المناديب والمركبات والعمليات.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Productivity Reports -->
-        <div class="feature-card fade-in">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));">
-            <i class="fas fa-chart-line" style="color: var(--error-500);"></i>
-          </div>
-          <h3>تقارير الإنتاجية</h3>
-          <p>تحليل مفصل لإنتاجية المناديب ومعدلات الإنجاز والأداء.</p>
-          <a href="#" class="feature-link">
-            <span>عرض التقرير</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        
-        <!-- Export Options -->
-        <div class="feature-card fade-in delay-1">
-          <div class="feature-icon" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));">
-            <i class="fas fa-file-export" style="color: #22c55e;"></i>
-          </div>
-          <h3>تصدير PDF – Excel</h3>
-          <p>إمكانية تصدير جميع التقارير بصيغ PDF و Excel للمشاركة والأرشفة.</p>
-          <a href="#" class="feature-link">
-            <span>تصدير الآن</span>
-            <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sample Dashboard Section -->
-  <section class="content-section dashboard-section" style="background: var(--gray-50);">
-    <div class="container">
-      <div class="section-header">
-        <h2>لوحة التقارير التفاعلية</h2>
-        <p>رسوم بيانية وجداول تفاعلية لعرض البيانات</p>
-      </div>
-      
-      <div class="dashboard-grid">
-        <!-- Performance Overview Chart -->
-        <div class="dashboard-card col-8 fade-in">
-          <div class="dashboard-card-header">
-            <div class="dashboard-card-title">
-              <i class="fas fa-chart-area" style="color: var(--primary-500); margin-left: 10px;"></i>
-              نظرة عامة على الأداء
+      <div class="reports-hero-content">
+        <div class="hero-text">
+          <h1>تقارير <span>ذكية</span> وتحليلات شاملة</h1>
+          <p>احصل على رؤية كاملة لعملياتك من خلال تقارير تفصيلية ورسوم بيانية توضيحية مع إمكانية التصدير والفلترة المتقدمة</p>
+          
+          <div class="hero-features-grid">
+            <div class="hero-feature-item">
+              <i class="fas fa-download"></i>
+              <span>تصدير بصيغ متعددة</span>
             </div>
-            <div class="tabs" style="margin: 0; padding: 4px; background: var(--gray-100); border-radius: var(--radius-md);">
-              <button class="tab-btn active" style="padding: 8px 16px; font-size: 0.85rem;">يومي</button>
-              <button class="tab-btn" style="padding: 8px 16px; font-size: 0.85rem;">أسبوعي</button>
-              <button class="tab-btn" style="padding: 8px 16px; font-size: 0.85rem;">شهري</button>
+            <div class="hero-feature-item">
+              <i class="fas fa-filter"></i>
+              <span>فلترة متقدمة</span>
             </div>
-          </div>
-          <div class="chart-placeholder" style="height: 300px;">
-            <div class="chart-bars" style="height: 180px;">
-              <div class="chart-bar" style="height: 70%;"></div>
-              <div class="chart-bar" style="height: 85%;"></div>
-              <div class="chart-bar" style="height: 60%;"></div>
-              <div class="chart-bar" style="height: 95%;"></div>
-              <div class="chart-bar" style="height: 75%;"></div>
-              <div class="chart-bar" style="height: 88%;"></div>
-              <div class="chart-bar" style="height: 65%;"></div>
+            <div class="hero-feature-item">
+              <i class="fas fa-clock"></i>
+              <span>تحديث تلقائي</span>
             </div>
-            <p style="color: var(--gray-400); font-size: 0.9rem;">رسم بياني للأداء</p>
-          </div>
-        </div>
-        
-        <!-- Quick Stats -->
-        <div class="dashboard-card col-4 fade-in delay-1">
-          <div class="dashboard-card-header">
-            <div class="dashboard-card-title">
-              <i class="fas fa-tachometer-alt" style="color: var(--primary-500); margin-left: 10px;"></i>
-              إحصائيات سريعة
-            </div>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
-              <span style="color: var(--gray-600);">الطلبات اليوم</span>
-              <span style="font-weight: 700; font-size: 1.25rem; color: var(--primary-600);">1,234</span>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
-              <span style="color: var(--gray-600);">نسبة النجاح</span>
-              <span style="font-weight: 700; font-size: 1.25rem; color: var(--success-500);">97.5%</span>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
-              <span style="color: var(--gray-600);">المناديب النشطين</span>
-              <span style="font-weight: 700; font-size: 1.25rem; color: var(--accent-500);">156</span>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--gray-50); border-radius: var(--radius-md);">
-              <span style="color: var(--gray-600);">متوسط وقت التسليم</span>
-              <span style="font-weight: 700; font-size: 1.25rem; color: var(--warning-500);">28 د</span>
+            <div class="hero-feature-item">
+              <i class="fas fa-chart-pie"></i>
+              <span>رسوم بيانية تفاعلية</span>
             </div>
           </div>
         </div>
         
-        <!-- Performance Table -->
-        <div class="dashboard-card col-12 fade-in delay-2" style="overflow-x: auto;">
-          <div class="dashboard-card-header">
-            <div class="dashboard-card-title">
-              <i class="fas fa-table" style="color: var(--primary-500); margin-left: 10px;"></i>
-              تقرير أداء المناديب
+        <!-- Reports Dashboard -->
+        <div class="reports-dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-title">
+              <i class="fas fa-file-chart"></i>
+              <span>التقارير المتاحة</span>
             </div>
-            <div class="d-flex gap-2">
-              <button class="btn" style="padding: 8px 16px; background: var(--gray-100); color: var(--gray-600); font-size: 0.9rem;">
-                <i class="fas fa-filter"></i> فلترة
-              </button>
-              <button class="btn" style="padding: 8px 16px; background: var(--error-100); color: var(--error-600); font-size: 0.9rem;">
-                <i class="fas fa-file-pdf"></i> PDF
-              </button>
-              <button class="btn" style="padding: 8px 16px; background: var(--success-400); color: white; font-size: 0.9rem;">
-                <i class="fas fa-file-excel"></i> Excel
-              </button>
+            <div class="export-badge">
+              <i class="fas fa-file-export"></i>
+              <span>تصدير</span>
             </div>
           </div>
           
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>المندوب</th>
-                <th>الطلبات</th>
-                <th>نسبة النجاح</th>
-                <th>متوسط الوقت</th>
-                <th>التقييم</th>
-                <th>الإنتاجية</th>
-                <th>الحالة</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                      <i class="fas fa-user"></i>
-                    </div>
-                    <span>أحمد محمد</span>
-                  </div>
-                </td>
-                <td>145</td>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div class="progress-bar" style="width: 80px; height: 8px;">
-                      <div class="progress-fill" style="width: 98%;"></div>
-                    </div>
-                    <span style="font-weight: 600; color: var(--success-500);">98%</span>
-                  </div>
-                </td>
-                <td>24 دقيقة</td>
-                <td>
-                  <div style="color: var(--warning-500);">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span style="margin-right: 5px;">4.7</span>
-                  </div>
-                </td>
-                <td><span class="status-badge success">ممتاز</span></td>
-                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                      <i class="fas fa-user"></i>
-                    </div>
-                    <span>خالد العلي</span>
-                  </div>
-                </td>
-                <td>132</td>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div class="progress-bar" style="width: 80px; height: 8px;">
-                      <div class="progress-fill" style="width: 95%;"></div>
-                    </div>
-                    <span style="font-weight: 600; color: var(--success-500);">95%</span>
-                  </div>
-                </td>
-                <td>27 دقيقة</td>
-                <td>
-                  <div style="color: var(--warning-500);">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span style="margin-right: 5px;">4.3</span>
-                  </div>
-                </td>
-                <td><span class="status-badge success">ممتاز</span></td>
-                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                      <i class="fas fa-user"></i>
-                    </div>
-                    <span>فهد السعيد</span>
-                  </div>
-                </td>
-                <td>118</td>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div class="progress-bar" style="width: 80px; height: 8px;">
-                      <div class="progress-fill" style="width: 88%;"></div>
-                    </div>
-                    <span style="font-weight: 600; color: var(--warning-500);">88%</span>
-                  </div>
-                </td>
-                <td>32 دقيقة</td>
-                <td>
-                  <div style="color: var(--warning-500);">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span style="margin-right: 5px;">4.0</span>
-                  </div>
-                </td>
-                <td><span class="status-badge warning">جيد</span></td>
-                <td><span class="status-badge success"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> نشط</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div style="width: 36px; height: 36px; background: var(--primary-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-600);">
-                      <i class="fas fa-user"></i>
-                    </div>
-                    <span>عبدالله الحربي</span>
-                  </div>
-                </td>
-                <td>95</td>
-                <td>
-                  <div class="d-flex align-center gap-2">
-                    <div class="progress-bar" style="width: 80px; height: 8px;">
-                      <div class="progress-fill" style="width: 75%; background: linear-gradient(90deg, var(--warning-500), var(--warning-400));"></div>
-                    </div>
-                    <span style="font-weight: 600; color: var(--warning-500);">75%</span>
-                  </div>
-                </td>
-                <td>38 دقيقة</td>
-                <td>
-                  <div style="color: var(--warning-500);">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <span style="margin-right: 5px;">3.5</span>
-                  </div>
-                </td>
-                <td><span class="status-badge error">يحتاج تحسين</span></td>
-                <td><span class="status-badge warning"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> متأخر</span></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="report-types">
+            <div class="report-type-card">
+              <div class="report-type-icon">
+                <i class="fas fa-calendar-day"></i>
+              </div>
+              <div class="report-type-title">تقارير يومية</div>
+              <div class="report-type-count">32 تقرير متاح</div>
+            </div>
+            
+            <div class="report-type-card">
+              <div class="report-type-icon">
+                <i class="fas fa-calendar-week"></i>
+              </div>
+              <div class="report-type-title">تقارير أسبوعية</div>
+              <div class="report-type-count">18 تقرير متاح</div>
+            </div>
+            
+            <div class="report-type-card">
+              <div class="report-type-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="report-type-title">تقارير شهرية</div>
+              <div class="report-type-count">24 تقرير متاح</div>
+            </div>
+            
+            <div class="report-type-card">
+              <div class="report-type-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="report-type-title">تقارير مخصصة</div>
+              <div class="report-type-count">غير محدود</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Export Section -->
-  <section class="content-section">
+  <!-- Report Categories -->
+  <section class="categories-section">
     <div class="container">
-      <div class="section-header">
-        <h2>خيارات التصدير والمشاركة</h2>
-        <p>صدّر تقاريرك بصيغ متعددة لسهولة المشاركة والأرشفة</p>
+      <div class="section-header text-center">
+        <h2>أنواع التقارير</h2>
+        <p>مجموعة شاملة من التقارير لجميع جوانب العمليات</p>
       </div>
       
-      <div class="content-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="content-card fade-in text-center">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #dc2626, #ef4444); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
-            <i class="fas fa-file-pdf"></i>
+      <div class="category-tabs">
+        <button class="category-tab active">الكل</button>
+        <button class="category-tab">الأداء</button>
+        <button class="category-tab">المركبات</button>
+        <button class="category-tab">المناديب</button>
+        <button class="category-tab">المالي</button>
+        <button class="category-tab">التشغيل</button>
+      </div>
+      
+      <div class="reports-grid">
+        <div class="report-card fade-in">
+          <div class="report-card-header">
+            <div class="report-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
           </div>
-          <h4>تصدير PDF</h4>
-          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">تقارير منسقة جاهزة للطباعة والمشاركة</p>
-          <button class="btn btn-secondary" style="width: 100%;">
-            <i class="fas fa-download"></i> تحميل PDF
-          </button>
+          <h3>تقرير الأداء اليومي</h3>
+          <p>تقرير شامل عن أداء المناديب والطلبات المكتملة مع مؤشرات الأداء الرئيسية</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>يومي</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
         </div>
         
-        <div class="content-card fade-in delay-1 text-center">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #059669, #10b981); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
-            <i class="fas fa-file-excel"></i>
+        <div class="report-card fade-in delay-1">
+          <div class="report-card-header">
+            <div class="report-icon green">
+              <i class="fas fa-users"></i>
+            </div>
           </div>
-          <h4>تصدير Excel</h4>
-          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">بيانات قابلة للتحرير والتحليل المتقدم</p>
-          <button class="btn btn-secondary" style="width: 100%;">
-            <i class="fas fa-download"></i> تحميل Excel
-          </button>
+          <h3>تقرير المناديب</h3>
+          <p>تفاصيل كاملة عن حضور وأداء وتقييمات المناديب خلال الفترة المحددة</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>أسبوعي</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
         </div>
         
-        <div class="content-card fade-in delay-2 text-center">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
-            <i class="fas fa-share-nodes"></i>
+        <div class="report-card fade-in delay-2">
+          <div class="report-card-header">
+            <div class="report-icon purple">
+              <i class="fas fa-car"></i>
+            </div>
           </div>
-          <h4>مشاركة التقرير</h4>
-          <p style="color: var(--gray-500); margin-top: 12px; margin-bottom: 20px;">شارك التقارير مع فريقك عبر رابط مباشر</p>
-          <button class="btn btn-primary" style="width: 100%;">
-            <i class="fas fa-link"></i> نسخ الرابط
-          </button>
+          <h3>تقرير المركبات</h3>
+          <p>حالة الأسطول والصيانة والمسافات المقطوعة واستهلاك الوقود</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>شهري</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="report-card fade-in delay-3">
+          <div class="report-card-header">
+            <div class="report-icon orange">
+              <i class="fas fa-wallet"></i>
+            </div>
+          </div>
+          <h3>التقرير المالي</h3>
+          <p>ملخص شامل للتسويات المالية والإيرادات والمصروفات</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>شهري</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="report-card fade-in delay-4">
+          <div class="report-card-header">
+            <div class="report-icon">
+              <i class="fas fa-route"></i>
+            </div>
+          </div>
+          <h3>تقرير الرحلات</h3>
+          <p>تحليل تفصيلي لجميع الرحلات والمسافات والأوقات والتكاليف</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>يومي</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="report-card fade-in delay-5">
+          <div class="report-card-header">
+            <div class="report-icon green">
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <h3>تقرير التقييمات</h3>
+          <p>تقييمات العملاء ومعدلات الرضا والشكاوى والملاحظات</p>
+          <div class="report-meta">
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>أسبوعي</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-download"></i>
+              <span>PDF, Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visualization Section -->
+  <section class="visualization-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>رسوم بيانية وتحليلات</h2>
+        <p>بيانات مرئية لفهم أفضل للاتجاهات والأنماط</p>
+      </div>
+      
+      <div class="viz-grid">
+        <div class="viz-large">
+          <div class="viz-title">اتجاهات الأداء (آخر 30 يوم)</div>
+          <div class="line-chart">
+            <div class="chart-grid-lines">
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+            </div>
+            <svg width="100%" height="100%" style="position: relative;">
+              <path class="line-path" d="M 0 200 Q 100 150, 200 180 T 400 120 T 600 100 T 800 80" />
+            </svg>
+          </div>
+        </div>
+        
+        <div class="viz-stats">
+          <div class="viz-stat-card">
+            <div class="viz-stat-header">
+              <div class="viz-stat-label">إجمالي الطلبات</div>
+              <div class="viz-stat-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">
+                <i class="fas fa-box"></i>
+              </div>
+            </div>
+            <div class="viz-stat-value">15,847</div>
+            <div class="viz-stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>+22.5% من الشهر الماضي</span>
+            </div>
+          </div>
+          
+          <div class="viz-stat-card">
+            <div class="viz-stat-header">
+              <div class="viz-stat-label">معدل النجاح</div>
+              <div class="viz-stat-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="viz-stat-value">96.8%</div>
+            <div class="viz-stat-trend positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>+3.2% تحسن ملحوظ</span>
+            </div>
+          </div>
+          
+          <div class="viz-stat-card">
+            <div class="viz-stat-header">
+              <div class="viz-stat-label">متوسط وقت التوصيل</div>
+              <div class="viz-stat-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                <i class="fas fa-clock"></i>
+              </div>
+            </div>
+            <div class="viz-stat-value">26 د</div>
+            <div class="viz-stat-trend positive">
+              <i class="fas fa-arrow-down"></i>
+              <span>-18% أسرع من المعتاد</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-800)); position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.2), transparent 50%);"></div>
-    <div class="container" style="position: relative; z-index: 10;">
+  <section class="section" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+    <div class="container">
       <div class="text-center">
-        <h2 style="color: white; margin-bottom: 20px;">احصل على تقارير مفصلة لأعمالك</h2>
-        <p style="color: var(--gray-300); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
-          استخدم تقاريرنا المتقدمة لاتخاذ قرارات أفضل وتحسين أداء فريقك
+        <h2 style="color: white; margin-bottom: 20px;">جاهز للحصول على تقارير تفصيلية؟</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px;">
+          ابدأ الآن واحصل على رؤية كاملة لعملياتك مع تقارير شاملة ودقيقة
         </p>
         <div class="d-flex gap-3 justify-center flex-wrap">
           <a href="support.html#contact" class="btn btn-secondary btn-lg">
             <i class="fas fa-rocket"></i>
             <span>ابدأ مجاناً</span>
           </a>
-          <a href="alerts.html" class="btn btn-outline btn-lg">
-            <i class="fas fa-bell"></i>
-            <span>التنبيهات</span>
+          <a href="support.html" class="btn btn-outline btn-lg" style="color: white; border-color: white;">
+            <i class="fas fa-phone"></i>
+            <span>تحدث معنا</span>
           </a>
         </div>
       </div>
@@ -542,4 +864,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
