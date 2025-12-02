@@ -679,6 +679,296 @@
     </div>
   </section>
 
+  <!-- Analytics Section -->
+  <section class="analytics-section" style="padding: 100px 0; background: white;">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>تحليلات التنبيهات المتقدمة</h2>
+        <p>رؤية شاملة لجميع التنبيهات والأنماط والاتجاهات</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-top: 50px;">
+        <!-- Left: Charts and Timeline -->
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <!-- Alert Distribution Chart -->
+          <div style="background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 24px; padding: 40px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50%; right: -30%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(239, 68, 68, 0.15), transparent); border-radius: 50%;"></div>
+            <div style="position: relative; z-index: 10;">
+              <h3 style="font-size: 1.4rem; font-weight: 700; color: #1f2937; margin-bottom: 32px;">توزيع أنواع التنبيهات (آخر 30 يوم)</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+                <!-- Donut Chart -->
+                <div style="position: relative; width: 220px; height: 220px; margin: 0 auto;">
+                  <svg width="220" height="220" viewBox="0 0 220 220" style="transform: rotate(-90deg);">
+                    <!-- Background circle -->
+                    <circle cx="110" cy="110" r="90" fill="none" stroke="#e5e7eb" stroke-width="40"></circle>
+                    <!-- Critical (35%) - Red -->
+                    <circle cx="110" cy="110" r="90" fill="none" stroke="#ef4444" stroke-width="40" 
+                            stroke-dasharray="197.92 565.48" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                    <!-- Warning (28%) - Orange -->
+                    <circle cx="110" cy="110" r="90" fill="none" stroke="#f59e0b" stroke-width="40" 
+                            stroke-dasharray="158.34 565.48" stroke-dashoffset="-197.92" stroke-linecap="round"></circle>
+                    <!-- Info (22%) - Blue -->
+                    <circle cx="110" cy="110" r="90" fill="none" stroke="#3b82f6" stroke-width="40" 
+                            stroke-dasharray="124.41 565.48" stroke-dashoffset="-356.26" stroke-linecap="round"></circle>
+                    <!-- Success (15%) - Green -->
+                    <circle cx="110" cy="110" r="90" fill="none" stroke="#10b981" stroke-width="40" 
+                            stroke-dasharray="84.82 565.48" stroke-dashoffset="-480.67" stroke-linecap="round"></circle>
+                  </svg>
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: #1f2937;">2,847</div>
+                    <div style="color: #6b7280; font-size: 0.9rem; margin-top: 4px;">إجمالي التنبيهات</div>
+                  </div>
+                </div>
+                
+                <!-- Legend -->
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 16px; height: 16px; background: #ef4444; border-radius: 4px;"></div>
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; color: #1f2937;">حرجة</div>
+                      <div style="color: #6b7280; font-size: 0.85rem;">997 تنبيه (35%)</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 16px; height: 16px; background: #f59e0b; border-radius: 4px;"></div>
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; color: #1f2937;">تحذيرية</div>
+                      <div style="color: #6b7280; font-size: 0.85rem;">797 تنبيه (28%)</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 16px; height: 16px; background: #3b82f6; border-radius: 4px;"></div>
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; color: #1f2937;">معلوماتية</div>
+                      <div style="color: #6b7280; font-size: 0.85rem;">626 تنبيه (22%)</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 16px; height: 16px; background: #10b981; border-radius: 4px;"></div>
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; color: #1f2937;">نجاح</div>
+                      <div style="color: #6b7280; font-size: 0.85rem;">427 تنبيه (15%)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Alerts Timeline -->
+          <div style="background: white; border: 2px solid #e5e7eb; border-radius: 24px; padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+              <h3 style="font-size: 1.3rem; font-weight: 700; color: #1f2937;">النشاط الأخير</h3>
+              <span style="padding: 6px 14px; background: #fef3c7; color: #d97706; border-radius: 100px; font-size: 0.85rem; font-weight: 600;">آخر 24 ساعة</span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <!-- Timeline Item 1 -->
+              <div style="display: flex; gap: 16px; padding: 16px; background: #fef2f2; border-right: 4px solid #ef4444; border-radius: 12px;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">تجاوز حد الكاش اليومي</div>
+                  <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 8px;">المندوب أحمد محمد - 6,200 ر.س</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">منذ 5 دقائق</div>
+                </div>
+                <div style="padding: 6px 12px; background: white; border-radius: 8px; color: #ef4444; font-size: 0.85rem; font-weight: 600; height: fit-content;">حرج</div>
+              </div>
+              
+              <!-- Timeline Item 2 -->
+              <div style="display: flex; gap: 16px; padding: 16px; background: #fef9e7; border-right: 4px solid #f59e0b; border-radius: 12px;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-wrench"></i>
+                </div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">موعد صيانة قريب</div>
+                  <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 8px;">مركبة ABC-1234 - خلال 3 أيام</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">منذ 18 دقيقة</div>
+                </div>
+                <div style="padding: 6px 12px; background: white; border-radius: 8px; color: #f59e0b; font-size: 0.85rem; font-weight: 600; height: fit-content;">تحذير</div>
+              </div>
+              
+              <!-- Timeline Item 3 -->
+              <div style="display: flex; gap: 16px; padding: 16px; background: #eff6ff; border-right: 4px solid #3b82f6; border-radius: 12px;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">تحديث نظام التسويات</div>
+                  <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 8px;">تم إضافة مزايا جديدة</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">منذ ساعة</div>
+                </div>
+                <div style="padding: 6px 12px; background: white; border-radius: 8px; color: #3b82f6; font-size: 0.85rem; font-weight: 600; height: fit-content;">معلومة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Statistics -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Response Time -->
+          <div style="background: white; border: 2px solid #e5e7eb; border-radius: 20px; padding: 28px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#ef4444'; this.style.boxShadow='0 12px 32px rgba(239,68,68,0.15)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <div style="color: #6b7280; font-size: 0.95rem;">وقت الاستجابة</div>
+              <div style="width: 48px; height: 48px; background: rgba(239, 68, 68, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ef4444; font-size: 1.2rem;">
+                <i class="fas fa-stopwatch"></i>
+              </div>
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 12px;">< 1s</div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-size: 0.9rem;">
+              <i class="fas fa-arrow-down"></i>
+              <span>تحسن بنسبة 42% عن الشهر الماضي</span>
+            </div>
+          </div>
+          
+          <!-- Resolution Rate -->
+          <div style="background: white; border: 2px solid #e5e7eb; border-radius: 20px; padding: 28px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#10b981'; this.style.boxShadow='0 12px 32px rgba(16,185,129,0.15)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <div style="color: #6b7280; font-size: 0.95rem;">معدل المعالجة</div>
+              <div style="width: 48px; height: 48px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 1.2rem;">
+                <i class="fas fa-check-double"></i>
+              </div>
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 12px;">94.8%</div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-size: 0.9rem;">
+              <i class="fas fa-arrow-up"></i>
+              <span>+5.2% زيادة في الكفاءة</span>
+            </div>
+          </div>
+          
+          <!-- Active Alerts -->
+          <div style="background: white; border: 2px solid #e5e7eb; border-radius: 20px; padding: 28px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#f59e0b'; this.style.boxShadow='0 12px 32px rgba(245,158,11,0.15)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none'">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <div style="color: #6b7280; font-size: 0.95rem;">التنبيهات النشطة</div>
+              <div style="width: 48px; height: 48px; background: rgba(245, 158, 11, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #f59e0b; font-size: 1.2rem;">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 12px;">127</div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #6b7280; font-size: 0.9rem;">
+              <i class="fas fa-circle" style="font-size: 0.5rem; color: #f59e0b;"></i>
+              <span>23 تحتاج اهتمام فوري</span>
+            </div>
+          </div>
+          
+          <!-- Trend Analysis -->
+          <div style="background: linear-gradient(135deg, #1f2937, #111827); border-radius: 20px; padding: 28px; color: white;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <div style="width: 40px; height: 40px; background: rgba(239, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-chart-line" style="color: #ef4444;"></i>
+              </div>
+              <h4 style="font-size: 1.1rem; font-weight: 600; margin: 0;">تحليل الاتجاه</h4>
+            </div>
+            <div style="margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 0.85rem; opacity: 0.8;">اتجاه التنبيهات</span>
+                <span style="font-size: 0.85rem; font-weight: 600;">↓ -18%</span>
+              </div>
+              <div style="width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 100px; overflow: hidden;">
+                <div style="width: 82%; height: 100%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 100px;"></div>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.7; margin: 0; line-height: 1.6;">انخفاض ملحوظ في عدد التنبيهات الحرجة مقارنة بالشهر الماضي</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Weekly Trends Chart -->
+      <div style="background: white; border: 2px solid #e5e7eb; border-radius: 24px; padding: 40px; margin-top: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: #1f2937;">اتجاهات التنبيهات الأسبوعية</h3>
+          <div style="display: flex; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 3px;"></div>
+              <span style="color: #6b7280; font-size: 0.9rem;">حرجة</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 3px;"></div>
+              <span style="color: #6b7280; font-size: 0.9rem;">تحذيرية</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 12px; height: 12px; background: #3b82f6; border-radius: 3px;"></div>
+              <span style="color: #6b7280; font-size: 0.9rem;">معلوماتية</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 280px; gap: 24px;">
+          <!-- Day 1 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 35%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 28%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 25%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الأحد</span>
+          </div>
+          
+          <!-- Day 2 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 42%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 32%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 22%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الإثنين</span>
+          </div>
+          
+          <!-- Day 3 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 38%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 25%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 30%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الثلاثاء</span>
+          </div>
+          
+          <!-- Day 4 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 30%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 28%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 35%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الأربعاء</span>
+          </div>
+          
+          <!-- Day 5 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 25%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 32%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 28%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الخميس</span>
+          </div>
+          
+          <!-- Day 6 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 20%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 22%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 25%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">الجمعة</span>
+          </div>
+          
+          <!-- Day 7 -->
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; height: 100%;">
+            <div style="width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+              <div style="width: 100%; height: 18%; background: linear-gradient(180deg, #ef4444, #dc2626); border-radius: 8px 8px 0 0; animation: growBar 1s ease-out;"></div>
+              <div style="width: 100%; height: 20%; background: linear-gradient(180deg, #f59e0b, #d97706); border-radius: 8px 8px 0 0; animation: growBar 1.2s ease-out;"></div>
+              <div style="width: 100%; height: 22%; background: linear-gradient(180deg, #3b82f6, #2563eb); border-radius: 8px 8px 0 0; animation: growBar 1.4s ease-out;"></div>
+            </div>
+            <span style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">السبت</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
   <section class="features-section">
     <div class="container">
