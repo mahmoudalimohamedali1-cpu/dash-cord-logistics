@@ -434,16 +434,133 @@
       color: #ef4444;
     }
     
-    @media (max-width: 768px) {
+    /* Mobile Responsive - Professional */
+    @media (max-width: 480px) {
+      .reports-hero {
+        min-height: auto !important;
+        padding: 80px 0 40px !important;
+        display: block !important;
+      }
+      
+      .reports-hero .container {
+        padding: 0 16px !important;
+      }
+      
+      .reports-hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      
+      .hero-text {
+        width: 100% !important;
+        order: 1;
+      }
+      
+      .hero-text h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 12px !important;
+        line-height: 1.3 !important;
+        word-break: break-word;
+      }
+      
+      .hero-text h1 span {
+        display: block;
+        margin-top: 4px;
+      }
+      
+      .hero-text p {
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+        line-height: 1.6 !important;
+        padding: 0 8px;
+      }
+      
+      .hero-text .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        gap: 10px !important;
+        margin-bottom: 20px;
+      }
+      
+      .hero-text .d-flex.gap-3.flex-wrap .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        justify-content: center;
+      }
+      
+      .hero-features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-top: 20px !important;
+      }
+      
+      .hero-feature-item {
+        padding: 12px !important;
+        font-size: 0.85rem !important;
+      }
+      
+      .hero-feature-item i {
+        font-size: 1rem !important;
+      }
+      
+      .reports-dashboard {
+        margin-top: 24px !important;
+        padding: 16px !important;
+        order: 2;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .report-types {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      
+      .viz-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      
+      .chart-container,
+      .analytics-chart {
+        padding: 16px !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .chart-container svg,
+      .analytics-chart svg {
+        min-width: 600px;
+      }
+    }
+    
+    @media (max-width: 768px) and (min-width: 481px) {
       .reports-hero {
         min-height: auto !important;
         padding: 100px 0 50px !important;
+        display: block !important;
+      }
+      
+      .reports-hero .container {
+        padding: 0 20px !important;
       }
       
       .reports-hero-content {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
         text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      
+      .hero-text {
+        width: 100% !important;
+        order: 1;
       }
       
       .hero-text h1 {
@@ -467,6 +584,12 @@
         font-size: 0.9rem !important;
       }
       
+      .reports-dashboard {
+        margin-top: 30px !important;
+        padding: 20px !important;
+        order: 2;
+      }
+      
       .report-types {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
@@ -477,29 +600,25 @@
         gap: 20px !important;
       }
       
-      .reports-dashboard {
-        padding: 20px !important;
-      }
-      
       .chart-container,
       .analytics-chart {
         padding: 16px;
         overflow-x: auto;
       }
-      
-      .chart-container svg,
-      .analytics-chart svg {
-        min-width: 600px;
+    }
+    
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .reports-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
       
-      .d-flex.gap-3.flex-wrap {
-        flex-direction: column;
-        gap: 12px !important;
+      .report-types {
+        grid-template-columns: repeat(2, 1fr);
       }
       
-      .d-flex.gap-3.flex-wrap .btn {
-        width: 100%;
-        justify-content: center;
+      .viz-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
