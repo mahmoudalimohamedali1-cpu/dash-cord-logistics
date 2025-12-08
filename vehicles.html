@@ -966,7 +966,335 @@
       }
     }
     
-    @media (max-width: 768px) {
+    /* Mobile Responsive - All Screen Sizes */
+    @media (max-width: 480px) {
+      .vehicles-hero {
+        min-height: auto !important;
+        padding: 90px 0 40px !important;
+      }
+      
+      .vehicles-hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        text-align: center;
+      }
+      
+      .hero-text h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 12px !important;
+        line-height: 1.3 !important;
+      }
+      
+      .hero-text h1 span {
+        display: block;
+        margin-top: 4px;
+      }
+      
+      .hero-text p {
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+        line-height: 1.6 !important;
+      }
+      
+      .hero-stats {
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-top: 24px !important;
+        padding-top: 16px !important;
+      }
+      
+      .hero-stat {
+        width: 100% !important;
+        padding: 12px;
+      }
+      
+      .hero-stat-value {
+        font-size: 1.75rem !important;
+      }
+      
+      .hero-stat-label {
+        font-size: 0.8rem !important;
+      }
+      
+      .dashboard-preview {
+        margin-top: 24px;
+        width: 100%;
+        padding: 16px !important;
+      }
+      
+      .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      
+      .dashboard-title {
+        font-size: 0.9rem;
+      }
+      
+      .live-badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+      }
+      
+      .mini-stats {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .mini-stat {
+        padding: 14px 12px !important;
+      }
+      
+      .mini-stat-value {
+        font-size: 1.5rem !important;
+      }
+      
+      .mini-stat-label {
+        font-size: 0.75rem !important;
+      }
+      
+      .dashboard-chart {
+        padding: 14px !important;
+      }
+      
+      .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      
+      .chart-title {
+        font-size: 0.85rem;
+      }
+      
+      .chart-legend {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      
+      .chart-visual {
+        height: 100px;
+      }
+      
+      .gps-tracking-section {
+        padding: 60px 0 !important;
+      }
+      
+      .gps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      
+      .gps-content h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .gps-content > p {
+        font-size: 0.9rem !important;
+        margin-bottom: 24px !important;
+      }
+      
+      .gps-features {
+        gap: 16px;
+      }
+      
+      .gps-feature {
+        padding: 16px !important;
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .gps-feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+      }
+      
+      .gps-feature-content h4 {
+        font-size: 1rem;
+      }
+      
+      .gps-feature-content p {
+        font-size: 0.85rem;
+      }
+      
+      .gps-dashboard {
+        padding: 20px !important;
+      }
+      
+      .gps-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      
+      .gps-dashboard-title {
+        font-size: 1rem;
+      }
+      
+      .map-placeholder {
+        height: 200px;
+        margin-bottom: 16px;
+      }
+      
+      .feature-cards-grid,
+      .auth-cards-grid,
+      .handover-grid,
+      .benefits-grid,
+      .highlights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      
+      .feature-card-item,
+      .auth-card,
+      .handover-card,
+      .benefit-card,
+      .highlight-card {
+        padding: 20px 16px !important;
+      }
+      
+      .feature-card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+      }
+      
+      .feature-card-item h4,
+      .auth-card h4,
+      .handover-card h4 {
+        font-size: 1rem !important;
+      }
+      
+      .feature-card-item p,
+      .auth-card p,
+      .handover-card p {
+        font-size: 0.85rem !important;
+      }
+      
+      .auth-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+      }
+      
+      .handover-card-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+      }
+      
+      .benefit-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+      }
+      
+      .benefit-card h3 {
+        font-size: 1.1rem;
+      }
+      
+      .benefit-card p {
+        font-size: 0.85rem;
+      }
+      
+      .highlight-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      
+      .highlight-card h3 {
+        font-size: 1.2rem;
+      }
+      
+      .highlight-card p {
+        font-size: 0.9rem;
+      }
+      
+      .checklist-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+      
+      .checklist-item {
+        padding: 12px 16px !important;
+      }
+      
+      .checklist-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        font-size: 0.75rem;
+      }
+      
+      .checklist-item span {
+        font-size: 0.85rem;
+      }
+      
+      .connected-platforms {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      
+      .platform-item {
+        padding: 12px !important;
+      }
+      
+      .platform-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+      
+      .platform-name {
+        font-size: 0.85rem;
+      }
+      
+      .platform-status {
+        font-size: 0.7rem;
+      }
+      
+      .section-icon-title {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+      
+      .section-icon-box {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+      }
+      
+      .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        gap: 10px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+      
+      .btn-lg {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 768px) and (min-width: 481px) {
       .vehicles-hero {
         min-height: auto !important;
         padding: 100px 0 50px !important;
@@ -1010,6 +1338,7 @@
       .dashboard-preview {
         margin-top: 30px;
         width: 100%;
+        padding: 20px !important;
       }
       
       .mini-stats {
@@ -1052,6 +1381,31 @@
       .d-flex.gap-3.flex-wrap .btn {
         width: 100%;
         justify-content: center;
+      }
+    }
+    
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .vehicles-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .connected-platforms {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .feature-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .auth-cards-grid,
+      .handover-grid,
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
