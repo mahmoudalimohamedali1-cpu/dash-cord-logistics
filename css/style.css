@@ -1415,30 +1415,63 @@ img {
     --section-padding: 60px 0;
   }
   
+  .navbar .container {
+    height: 70px;
+    padding: 0 16px;
+  }
+  
+  .navbar-logo .dashcord-logo-img {
+    height: 250px;
+  }
+  
+  .navbar-menu {
+    top: 70px;
+    padding: 20px 16px;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .navbar-menu a {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  
   .hero {
-    padding: 120px 0 80px;
+    padding: 100px 0 60px;
     min-height: auto;
   }
   
   .hero-features {
     flex-direction: column;
+    gap: 12px;
   }
   
   .hero-brands-logos {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   
   .content-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
   }
   
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .footer {
+    padding: 60px 0 30px;
   }
   
   .footer-grid {
@@ -1455,14 +1488,45 @@ img {
     justify-content: center;
   }
   
+  .footer-logo .dashcord-logo-img {
+    height: 220px;
+  }
+  
+  .footer-column {
+    margin-bottom: 30px;
+  }
+  
+  .footer-column h5 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  
+  .footer-links {
+    gap: 12px;
+  }
+  
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+  
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding-top: 30px;
+  }
+  
+  .footer-social {
+    justify-content: center;
   }
   
   .attendance-codes {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .section {
+    padding: 50px 0;
   }
 }
 
@@ -1471,24 +1535,106 @@ img {
     padding: 0 16px;
   }
   
+  .hero-v2 {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .hero-title-v2 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle-v2 {
+    font-size: 0.9rem;
+  }
+  
+  .hero-badge-v2 {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .hero-trust {
+    gap: 10px;
+  }
+  
+  .trust-item {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+  
+  .hero-partners {
+    padding: 30px 15px;
+    margin-top: 40px;
+  }
+  
+  .partners-label {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .partner-logo {
+    padding: 15px 16px;
+    min-width: 90px;
+    min-height: 70px;
+    flex: 1 1 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+  
+  .partner-logo-img {
+    max-height: 40px;
+  }
+  
   .feature-card {
-    padding: 28px;
+    padding: 24px 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
   }
   
   .content-card {
-    padding: 28px;
+    padding: 24px 20px;
   }
   
   .dashboard-card {
-    padding: 24px;
+    padding: 20px;
   }
   
   .btn {
     width: 100%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
   }
   
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .section-header p {
+    font-size: 0.9rem;
+  }
+  
+  .navbar-logo .dashcord-logo-img {
+    height: 200px;
+  }
+  
+  .footer-logo .dashcord-logo-img {
+    height: 200px;
   }
 }
 
@@ -2617,10 +2763,12 @@ img {
   
   .hero-title-v2 {
     font-size: 2rem;
+    line-height: 1.2;
   }
   
   .hero-subtitle-v2 {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
   
   .hero-quick-stats {
@@ -2634,49 +2782,216 @@ img {
   
   .hero-cta-group {
     flex-direction: column;
+    gap: 12px;
   }
   
   .btn-hero-primary,
   .btn-hero-secondary {
     width: 100%;
     justify-content: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .hero-trust {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .trust-item {
+    justify-content: center;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .trust-item i {
+    font-size: 1rem;
   }
   
   .hero-partners {
-    padding: 50px 30px;
-    border-radius: 24px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-top: 60px;
   }
   
   .partners-label {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
   }
   
   .partners-logos {
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
   }
   
   .partner-logo {
-    padding: 20px 24px;
-    min-width: 120px;
-    min-height: 90px;
-    border-radius: 16px;
+    padding: 18px 20px;
+    min-width: 100px;
+    min-height: 80px;
+    border-radius: 14px;
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
   
   .partner-logo-img {
-    max-height: 70px;
+    max-height: 50px;
   }
   
   .partner-logo-icon i {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   
   .partner-logo-icon span {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .feature-card {
+    padding: 30px 24px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
   
   .floating-element {
     display: none;
+  }
+  
+  .hero-visual {
+    display: none;
+  }
+  
+  .hero-layout {
+    gap: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-header p {
+    font-size: 0.95rem;
+  }
+  
+  /* Platform Ecosystem Section - Mobile */
+  .section[style*="background: linear-gradient"] {
+    padding: 60px 0 !important;
+  }
+  
+  .section[style*="background: linear-gradient"] .container {
+    padding: 0 16px;
+  }
+  
+  .section[style*="background: linear-gradient"] .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section[style*="background: linear-gradient"] .section-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section[style*="background: linear-gradient"] svg {
+    display: none;
+  }
+  
+  /* Stats Section - Mobile */
+  .stats-section {
+    padding: 50px 0;
+  }
+  
+  .stats-grid {
+    gap: 20px;
+  }
+  
+  .stat-item {
+    padding: 24px 20px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  /* Page Headers - Mobile */
+  .page-header {
+    padding: 100px 0 50px;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+  }
+  
+  /* Content Cards - Mobile */
+  .content-card {
+    padding: 24px 20px;
+  }
+  
+  .content-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .content-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+  
+  .content-list-item {
+    padding: 14px;
+  }
+  
+  /* Dashboard Cards - Mobile */
+  .dashboard-card {
+    padding: 20px;
+  }
+  
+  .dashboard-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  /* CTA Section - Mobile */
+  .section[style*="background: linear-gradient(135deg"] {
+    padding: 50px 0 !important;
+  }
+  
+  .section[style*="background: linear-gradient(135deg"] h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section[style*="background: linear-gradient(135deg"] p {
+    font-size: 1rem;
+  }
+  
+  /* Scroll to Top - Mobile */
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1rem;
   }
 }
 
