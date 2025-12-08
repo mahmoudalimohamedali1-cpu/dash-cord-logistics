@@ -453,16 +453,74 @@
     }
     
     @media (max-width: 768px) {
+      .riders-hero {
+        min-height: auto !important;
+        padding: 100px 0 50px !important;
+      }
+      
       .riders-hero-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+      }
+      
+      .hero-text h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .hero-text p {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
+      }
+      
+      .hero-stats {
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin-top: 30px !important;
+        padding-top: 20px !important;
+      }
+      
+      .hero-stat {
+        width: 100% !important;
+      }
+      
+      .hero-stat-value {
+        font-size: 2rem !important;
+      }
+      
+      .hero-stat-label {
+        font-size: 0.9rem !important;
+      }
+      
+      .dashboard-preview {
+        margin-top: 30px;
+        width: 100%;
+        padding: 20px !important;
       }
       
       .analytics-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
       }
       
       .performance-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .analytics-stat-card {
+        padding: 20px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        gap: 12px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -534,47 +592,47 @@
               <div class="mini-stat-header">
                 <div class="mini-stat-icon green">
                   <i class="fas fa-user-check"></i>
-                </div>
+            </div>
                 <div class="mini-stat-badge up">↑ 12%</div>
-              </div>
+            </div>
               <div class="mini-stat-value">186</div>
               <div class="mini-stat-label">مناديب متاحين</div>
-            </div>
-            
+        </div>
+        
             <div class="mini-stat">
               <div class="mini-stat-header">
                 <div class="mini-stat-icon blue">
                   <i class="fas fa-motorcycle"></i>
-                </div>
+            </div>
                 <div class="mini-stat-badge up">↑ 8%</div>
-              </div>
+          </div>
               <div class="mini-stat-value">64</div>
               <div class="mini-stat-label">في الشيفت الآن</div>
-            </div>
-            
+        </div>
+        
             <div class="mini-stat">
               <div class="mini-stat-header">
                 <div class="mini-stat-icon purple">
                   <i class="fas fa-box"></i>
-                </div>
+            </div>
                 <div class="mini-stat-badge up">↑ 15%</div>
-              </div>
+          </div>
               <div class="mini-stat-value">1,247</div>
               <div class="mini-stat-label">طلبات اليوم</div>
-            </div>
-            
+        </div>
+        
             <div class="mini-stat">
               <div class="mini-stat-header">
                 <div class="mini-stat-icon yellow">
                   <i class="fas fa-star"></i>
-                </div>
+            </div>
                 <div class="mini-stat-badge up">↑ 0.2</div>
-              </div>
+          </div>
               <div class="mini-stat-value">4.8</div>
               <div class="mini-stat-label">متوسط التقييم</div>
-            </div>
           </div>
-          
+        </div>
+        
           <div class="dashboard-chart">
             <div class="chart-header">
               <div class="chart-title">الأداء الأسبوعي</div>
@@ -630,12 +688,12 @@
         <div class="performance-card fade-in delay-3">
           <div class="performance-icon">
             <i class="fas fa-chart-bar"></i>
-          </div>
+            </div>
           <h3>تقارير الإنتاجية</h3>
           <p>تقارير شاملة عن إنتاجية كل منديب مع مقارنات ورسوم بيانية توضيحية</p>
-        </div>
-      </div>
-    </div>
+              </div>
+            </div>
+          </div>
   </section>
 
   <!-- Analytics Section -->
@@ -644,8 +702,8 @@
       <div class="section-header text-center">
         <h2>تحليلات وإحصائيات متقدمة</h2>
         <p>بيانات دقيقة وتحليلات شاملة لاتخاذ قرارات مبنية على معلومات حقيقية</p>
-      </div>
-      
+        </div>
+        
       <div class="analytics-grid">
         <div class="analytics-visual">
           <div class="circular-progress">
@@ -674,9 +732,9 @@
             <div class="stat-trend positive">
               <i class="fas fa-arrow-up"></i>
               <span>+18% من الأسبوع الماضي</span>
-            </div>
           </div>
-          
+        </div>
+        
           <div class="analytics-stat-card">
             <div class="stat-header">
               <div class="stat-title">وقت التوصيل</div>
@@ -696,7 +754,7 @@
               <div class="stat-title">نسبة النجاح</div>
               <div class="stat-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
                 <i class="fas fa-check-circle"></i>
-              </div>
+        </div>
             </div>
             <div class="stat-value">96.5%</div>
             <div class="stat-trend positive">

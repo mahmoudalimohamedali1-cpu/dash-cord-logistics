@@ -967,28 +967,91 @@
     }
     
     @media (max-width: 768px) {
+      .vehicles-hero {
+        min-height: auto !important;
+        padding: 100px 0 50px !important;
+      }
+      
+      .vehicles-hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+      }
+      
+      .hero-text h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .hero-text p {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
+      }
+      
       .hero-stats {
-        flex-wrap: wrap;
-        gap: 24px;
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin-top: 30px !important;
+        padding-top: 20px !important;
+      }
+      
+      .hero-stat {
+        width: 100% !important;
+      }
+      
+      .hero-stat-value {
+        font-size: 2rem !important;
+      }
+      
+      .hero-stat-label {
+        font-size: 0.9rem !important;
+      }
+      
+      .dashboard-preview {
+        margin-top: 30px;
+        width: 100%;
       }
       
       .mini-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      
+      .mini-stat {
+        padding: 16px 12px !important;
       }
       
       .feature-cards-grid,
       .auth-cards-grid,
       .handover-grid,
       .benefits-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
       }
       
       .checklist-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
       }
       
       .connected-platforms {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .gps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        gap: 12px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -1578,7 +1641,7 @@
         <div class="footer-brand">
           <div class="footer-logo">
             <img src="logo.png" alt="DASHCORD" class="dashcord-logo-img">
-          </div>
+            </div>
           <p>الحل الأمثل لإدارة أسطولك بالكامل. منصة متكاملة تجمع بين إدارة المركبات والمناديب والتسويات في مكان واحد.</p>
         </div>
         

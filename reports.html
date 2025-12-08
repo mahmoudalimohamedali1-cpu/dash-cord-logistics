@@ -435,20 +435,71 @@
     }
     
     @media (max-width: 768px) {
+      .reports-hero {
+        min-height: auto !important;
+        padding: 100px 0 50px !important;
+      }
+      
       .reports-hero-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+      }
+      
+      .hero-text h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 16px !important;
+      }
+      
+      .hero-text p {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
       }
       
       .hero-features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        margin-top: 24px !important;
+      }
+      
+      .hero-feature-item {
+        padding: 12px !important;
+        font-size: 0.9rem !important;
       }
       
       .report-types {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
       }
       
       .viz-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .reports-dashboard {
+        padding: 20px !important;
+      }
+      
+      .chart-container,
+      .analytics-chart {
+        padding: 16px;
+        overflow-x: auto;
+      }
+      
+      .chart-container svg,
+      .analytics-chart svg {
+        min-width: 600px;
+      }
+      
+      .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        gap: 12px !important;
+      }
+      
+      .d-flex.gap-3.flex-wrap .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -497,15 +548,15 @@
             <div class="hero-feature-item">
               <i class="fas fa-filter"></i>
               <span>فلترة متقدمة</span>
-            </div>
+      </div>
             <div class="hero-feature-item">
               <i class="fas fa-clock"></i>
               <span>تحديث تلقائي</span>
-            </div>
+    </div>
             <div class="hero-feature-item">
               <i class="fas fa-chart-pie"></i>
               <span>رسوم بيانية تفاعلية</span>
-            </div>
+      </div>
           </div>
         </div>
         
@@ -515,45 +566,45 @@
             <div class="dashboard-title">
               <i class="fas fa-file-chart"></i>
               <span>التقارير المتاحة</span>
-            </div>
+          </div>
             <div class="export-badge">
               <i class="fas fa-file-export"></i>
               <span>تصدير</span>
-            </div>
-          </div>
-          
+        </div>
+        </div>
+        
           <div class="report-types">
             <div class="report-type-card">
               <div class="report-type-icon">
                 <i class="fas fa-calendar-day"></i>
-              </div>
+          </div>
               <div class="report-type-title">تقارير يومية</div>
               <div class="report-type-count">32 تقرير متاح</div>
-            </div>
-            
+        </div>
+        
             <div class="report-type-card">
               <div class="report-type-icon">
                 <i class="fas fa-calendar-week"></i>
-              </div>
+          </div>
               <div class="report-type-title">تقارير أسبوعية</div>
               <div class="report-type-count">18 تقرير متاح</div>
-            </div>
-            
+        </div>
+        
             <div class="report-type-card">
               <div class="report-type-icon">
                 <i class="fas fa-calendar-alt"></i>
-              </div>
+          </div>
               <div class="report-type-title">تقارير شهرية</div>
               <div class="report-type-count">24 تقرير متاح</div>
-            </div>
-            
+        </div>
+        
             <div class="report-type-card">
               <div class="report-type-icon">
                 <i class="fas fa-chart-line"></i>
-              </div>
+          </div>
               <div class="report-type-title">تقارير مخصصة</div>
               <div class="report-type-count">غير محدود</div>
-            </div>
+        </div>
           </div>
         </div>
       </div>
@@ -575,7 +626,7 @@
         <button class="category-tab">المناديب</button>
         <button class="category-tab">المالي</button>
         <button class="category-tab">التشغيل</button>
-      </div>
+            </div>
       
       <div class="reports-grid">
         <div class="report-card fade-in">
@@ -655,47 +706,47 @@
               <i class="fas fa-download"></i>
               <span>PDF, Excel</span>
             </div>
+            </div>
           </div>
-        </div>
-        
+          
         <div class="report-card fade-in delay-4">
           <div class="report-card-header">
             <div class="report-icon">
               <i class="fas fa-route"></i>
-            </div>
-          </div>
+                    </div>
+                  </div>
           <h3>تقرير الرحلات</h3>
           <p>تحليل تفصيلي لجميع الرحلات والمسافات والأوقات والتكاليف</p>
           <div class="report-meta">
             <div class="meta-item">
               <i class="fas fa-clock"></i>
               <span>يومي</span>
-            </div>
+                    </div>
             <div class="meta-item">
               <i class="fas fa-download"></i>
               <span>PDF, Excel</span>
-            </div>
-          </div>
-        </div>
+                  </div>
+                  </div>
+                    </div>
         
         <div class="report-card fade-in delay-5">
           <div class="report-card-header">
             <div class="report-icon green">
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
+                    <i class="fas fa-star"></i>
+                  </div>
+                    </div>
           <h3>تقرير التقييمات</h3>
           <p>تقييمات العملاء ومعدلات الرضا والشكاوى والملاحظات</p>
           <div class="report-meta">
             <div class="meta-item">
               <i class="fas fa-clock"></i>
               <span>أسبوعي</span>
-            </div>
+                  </div>
             <div class="meta-item">
               <i class="fas fa-download"></i>
               <span>PDF, Excel</span>
-            </div>
-          </div>
+                  </div>
+                  </div>
         </div>
       </div>
     </div>
@@ -753,8 +804,8 @@
               <i class="fas fa-arrow-up"></i>
               <span>+3.2% تحسن ملحوظ</span>
             </div>
-          </div>
-          
+        </div>
+        
           <div class="viz-stat-card">
             <div class="viz-stat-header">
               <div class="viz-stat-label">متوسط وقت التوصيل</div>
